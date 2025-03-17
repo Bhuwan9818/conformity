@@ -7,6 +7,7 @@
     <link rel="icon" href="assets/images/apple-touch-icon.png" type="image/x-icon">
     <title>Factory act</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sideBar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
@@ -69,25 +70,46 @@
             <section>
                 <div class="section-1-wrapper">
                     <div class="section-1-content">
-                        <div class="section-1-right">
+
+                        <div class="section-1-left">
                             <div class="sticky-div">
-                                <img src="assets/images/PF-and-ESIC-Compliance.jpg" alt="" sizes="" srcset="">
-                                <div class="right-content">
-                                    <h1>Factory Act Licence</h1>
-                                    <p>
-                                        • We, at our company, render professional quality services for factory license
-                                        registration in Delhi for all business owners in order to facilitate their
-                                        factory legal compliance processes. In support of this, we have a professional
-                                        workforce that has accumulated years of experience in the provision of
-                                        appropriate and effective solutions to customers. With a focus on
-                                        professionalism and accuracy, we ensure that our factory license registration
-                                        services in Delhi meet the highest standards. Our team works diligently to
-                                        streamline the licensing process, helping businesses stay compliant without
-                                        unnecessary delays. As reliable consultants, we leverage our extensive
-                                        experience to provide customized solutions that align with your specific
-                                        requirements, ensuring a hassle-free experience from start to finish.
-                                    </p>
-                                </div>
+                                    <!-- Button to Toggle Sidebar -->
+    <button class="sidebar-toggle">☰ Open Sidebar</button>
+    
+    <!-- Sidebar (Initially Hidden) -->
+    <div class="sidebar">
+        <h2>Our Services</h2>
+        
+        <!-- Dark Mode Toggle -->
+        <!-- <button class="dark-mode-toggle">🌙 Dark Mode</button> -->
+
+        <ul class="sidebar-menu">
+            <li>
+                <button class="dropdown-btn"><i class="fas fa-balance-scale"></i> Compliance Services ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">PF & ESIC Compliance</a></li>
+                    <li><a href="#">Payroll Processing</a></li>
+                    <li><a href="#">Establishment Audit</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="dropdown-btn"><i class="fas fa-industry"></i> Licensing & Labour Laws ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">Factory Act Licence</a></li>
+                    <li><a href="#">BOCW Compliances</a></li>
+                    <li><a href="#">Contract Labour Laws</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="dropdown-btn"><i class="fas fa-user-lock"></i> Legal Consultation ▾</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">Compliance Audit</a></li>
+                    <li><a href="#">Labour Laws Licensing</a></li>
+                    <li><a href="#">Subscribe Form</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
                             </div>
                         </div>
 
@@ -95,30 +117,27 @@
                             <div class="vr-line"></div>
                         </div>
 
-                        <div class="section-1-left">
-                            <div class="left-h1">
-                                <h1>OUR SERVICES</h1>
-                            </div>
-
-                            <div class="left-list">
-                                <a href="">PF & ESIC Compliance</a>
-                                <a href="">Payroll Processing</a>
-                                <a href="establishmentAudit.html">Establishment Audit Consultant</a>
-                                <a href="factoryAct.html">Factory Act Licence</a>
-                                <a href="">BOCW Compliances</a>
-                                <a href="">Contract Labour Compliances</a>
-                                <a href="">Compliance Audit & Consultation</a>
-                                <a href="">Labour Laws Licensing</a>
-                                <a href="">Subscribe Form</a>
-                                <a href="">Jobs</a>
-                                <a href="">Pollution Registration Service</a>
-                                <a href="">Statutory Compliance Services</a>
-                                <a href="">Posh Consultant Services</a>
-                                <a href="">Professional Tax Registration</a>
-                                <a href="">Night Exemption</a>
-                                <a href="">Professional Tax Registration</a>
+                        <div class="section-1-right">
+                            <img src="assets/images/PF-and-ESIC-Compliance.jpg" alt="" sizes="" srcset="">
+                            <div class="right-content">
+                                <h1>Factory Act Licence</h1>
+                                <p>
+                                    • We, at our company, render professional quality services for factory license
+                                    registration in Delhi for all business owners in order to facilitate their
+                                    factory legal compliance processes. In support of this, we have a professional
+                                    workforce that has accumulated years of experience in the provision of
+                                    appropriate and effective solutions to customers. With a focus on
+                                    professionalism and accuracy, we ensure that our factory license registration
+                                    services in Delhi meet the highest standards. Our team works diligently to
+                                    streamline the licensing process, helping businesses stay compliant without
+                                    unnecessary delays. As reliable consultants, we leverage our extensive
+                                    experience to provide customized solutions that align with your specific
+                                    requirements, ensuring a hassle-free experience from start to finish.
+                                </p>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </section>
@@ -194,6 +213,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/side.js"></script>
+
 </body>
 
 </html>

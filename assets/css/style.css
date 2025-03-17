@@ -5,9 +5,6 @@ html,body{
 body{
     font-family: 'Syne', sans-serif;
 }
- 
-
-
 
 #main{
     border: 1px solid hsl(0, 0%, 0%);
@@ -33,7 +30,7 @@ nav ul li a{
 
 .section-1-content{
     display: grid;
-    grid-template-columns: 1fr  1px .5fr;
+    grid-template-columns: .3fr  1px 1fr;
     grid-template-rows: auto;
     gap: 4rem;
 }
@@ -157,8 +154,11 @@ nav ul li a{
     height: 100%;
     background-color: #000000;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+    
 }
 
 #bottom{
@@ -193,6 +193,7 @@ nav ul li a{
 .center-content{
     display: flex;
     gap: 4rem;  
+    padding: 1rem 2rem;
 
 }
 
@@ -200,4 +201,57 @@ nav ul li a{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+
+.list-pages{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-content-end-right a, .list-pages a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Syne', sans-serif;
+}
+
+.center-footer-content{
+    max-width: 300px;
+}
+
+.left-center-footer{
+    min-width: 150px;
+}
+
+.footer-content-end{
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.h4-footer{
+    border-bottom: 1px solid hsl(0, 0%, 100%);
+}
+
+.right-center-footer{
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.center-footer-content-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.address-map{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
 }
