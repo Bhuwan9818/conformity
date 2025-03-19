@@ -109,11 +109,27 @@ nav ul li a{
         display: block;
     }
 
-    .center-content{
+    /* .center-content2{
         display: flex;
         gap: 4rem;  
         padding: 1rem 2rem;
         flex-wrap: wrap;
+    } */
+
+    .center-content2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 630px){
+    .center-content2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 3rem;
     }
 }
 
@@ -396,5 +412,21 @@ nav ul li a{
 
     #main{
         padding: 1rem;
+    }
+
+    .footer-content-end2{
+        gap: 1rem;
+    }
+
+    .center-footer-content-left2{
+        gap: 1rem;
+    }
+
+    .address-map2{
+        gap: 1rem;
+    }
+
+    .right-center-footer2{
+        gap: 1rem;
     }
 }
