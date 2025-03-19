@@ -32,39 +32,3 @@ function gravityAnimate() {
 
 
 gravityAnimate()
-
-// function innerGravityAnimate() {
-//     var tl2 = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: "#main1",
-//             markers: true,
-//             start: "50% 50%",
-//             end: "150% 50%",
-//             scrub: false,
-//             toggleActions:'play none none reverse',
-//             // pin:true,
-
-//         }
-//     })
-
-
-//     tl2.from("#center-one #heading", {
-//         x: -50,
-//         duration: 2,
-//         opacity: 0,
-//         delay: 1
-//     }, "h")
-
-//     tl2.from("#center-one #rahul", {
-//         x: 50,
-//         duration: 2,
-//         opacity: 0,
-//         delay: 1
-//     }, "h")
-
-//     tl2.from("#center-one #img1", {
-//         y: 90,
-//     }, "h")
-// }
-
-// innerGravityAnimate()
