@@ -116,6 +116,12 @@ ul{
     align-self: center;
 }
 
+@media(max-width:991px){
+    .navbar1{
+        align-self: start !important;
+    }   
+}
+
 .social2{
     border: 1px solid black;
     border-radius: 50%;
