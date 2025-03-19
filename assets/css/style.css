@@ -79,6 +79,10 @@ nav ul li a{
         display: none;
     }
 
+    .right-content h1{
+        font-size: 3rem !important;
+    }
+
     .hide{
         display: none;
     }
@@ -147,7 +151,7 @@ nav ul li a{
 }
 
 .right-content h1{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
     font-family: 'Syne',sans-serif;
@@ -380,5 +384,17 @@ nav ul li a{
     .iframe1{
         width:170px !important;
         height:170px !important;
+    }
+
+    .right-content h1{
+        font-size: 2rem !important;
+    }
+
+    .right-content p{
+        font-size: 1rem !important;
+    }
+
+    #main{
+        padding: 1rem;
     }
 }
