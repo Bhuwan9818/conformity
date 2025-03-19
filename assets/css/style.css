@@ -429,4 +429,8 @@ nav ul li a{
     .right-center-footer2{
         gap: 1rem;
     }
+
+    .section-1-wrapper {
+        padding-top: 0rem !important;
+    }
 }
