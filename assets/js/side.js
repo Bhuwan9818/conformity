@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.querySelector(".sidebar");
-    const toggleBtn = document.querySelector(".sidebar-toggle");
-    const darkModeBtn = document.querySelector(".dark-mode-toggle");
+    // const sidebar = document.querySelector(".sidebar");
+    // const toggleBtn = document.querySelector(".sidebar-toggle");
+    // const darkModeBtn = document.querySelector(".dark-mode-toggle");
     const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
-    // Toggle Sidebar Visibility
-    toggleBtn.addEventListener("click", function () {
-        sidebar.classList.toggle("active");
-        toggleBtn.innerHTML = sidebar.classList.contains("active") ? "✖ Close Sidebar" : "☰ Open Sidebar";
-    });
+    // // Toggle Sidebar Visibility
+    // toggleBtn.addEventListener("click", function () {
+    //     sidebar.classList.toggle("active");
+    //     toggleBtn.innerHTML = sidebar.classList.contains("active") ? "✖ Close Sidebar" : "☰ Open Sidebar";
+    // });
 
     // Dark Mode Toggle
     // darkModeBtn.addEventListener("click", function () {

@@ -204,7 +204,7 @@ nav ul li a{
 #top{
     width: 100%;
     height: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
     position: absolute;
     top: 0;
     overflow: hidden;
@@ -228,7 +228,7 @@ nav ul li a{
     position: absolute;
     width: 100%;
     height: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(247, 247, 247);
     bottom: 0;
     overflow: hidden;
     z-index: 1;
