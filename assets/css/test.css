@@ -20,7 +20,7 @@ body {
 
 /* Title Styling */
 .sidebar h2 {
-    text-align: center;
+    /* text-align: center; */
     color: #000000 !important;
     font-weight: 600;
     font-family: 'Syne', sans-serif;
@@ -92,11 +92,11 @@ body {
 }
 
 /* Special Styling for Subscribe Button */
-.subscribe {
+/* .subscribe {
     background: linear-gradient(135deg, #ff512f, #dd2476);
     font-weight: 600;
     text-align: center;
-}
+} */
 
 .subscribe:hover {
     transform: scale(1.1);
@@ -111,4 +111,12 @@ body {
     height: 1px;
     background-color: hsl(0, 0%, 0%);
     margin: 1rem 0;
+}
+
+.form-sidebar{
+    padding-bottom:1rem;
+}
+
+@media (max-width: 1300px){
+    
 }

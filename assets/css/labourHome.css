@@ -17,6 +17,18 @@
     font-family: 'Syne', sans-serif;
 }
 
+@media (max-width: 1200px){
+    .part-2-top h3{
+        font-size: 1.5rem;
+    }
+
+    .above-footer p{
+        font-size: 1.1rem !important;
+        
+    }
+
+}
+
 .part-2-top b{
     font-size: 1.4rem;
     font-family: 'Roboto Mono', sans-serif;
