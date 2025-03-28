@@ -245,93 +245,89 @@
                         <div class="section-1-left">
                             <div class="sidebar">
                                 <form class="d-flex form-sidebar" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                        aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                    <input class="form-control me-2" type="search" placeholder="Search Services..." id="searchBar" onkeyup="filterServices()">
+                                    <button type="button" class="btn btn-outline-warning">search</button>
                                 </form>
-
+                            
                                 <h2>Our Services</h2>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <div class="sidebar-first">
-                                    <h4>Registration & License </h4>
+                            
+                                <div class="hr-div"><div class="hr-line1"></div></div>
+                            
+                                <!-- Registration & License -->
+                                <div class="sidebar-first" data-category="Registration & License">
+                                    <h4>Registration & License</h4>
                                     <ul>
-                                        <li><a href="interStateMigration.html"> Inter-state Migrant
-                                                Registration</a></li>
-                                        <li><a href="ShopandEstablishmentLicense.html"> Shop and Establishment License
-                                            </a></li>
-                                        <li><a href="factoryAct.html"> Factory Act License </a></li>
-                                        <li><a href="BOWCE-licence.html"> BOCW License </a></li>
-                                        <li><a href="ContactLabourLicence.html" > Contract Labor License </a></li>
-                                        <li><a href="ElectricalLicence.html"> Electrical License </a></li>
-                                        <li><a href="tradeLicence.html"> Trade License </a></li>
-                                        <li><a href="PollutionCertification.html"> Pollution Certification </a></li>
-                                        <li class="subscribe"><a href="Fire&safetyCertification.html"> Fire & Safety
-                                                certification </a></li>
-                                        <li><a href="PASARA.html"> Private Security Agency License (PASARA) </a>
-                                        </li>
-                                        <li><a href="cateringLicence.html"> Catering License </a></li>
+                                        <li><a href="interStateMigration.html">Inter-state Migrant Registration</a></li>
+                                        <li><a href="ShopandEstablishmentLicense.html">Shop and Establishment License</a></li>
+                                        <li><a href="factoryAct.html">Factory Act License</a></li>
+                                        <li><a href="BOWCE-licence.html">BOCW License</a></li>
+                                        <li><a href="ContactLabourLicence.html">Contract Labor License</a></li>
+                                        <li><a href="ElectricalLicence.html">Electrical License</a></li>
+                                        <li><a href="tradeLicence.html">Trade License</a></li>
+                                        <li><a href="PollutionCertification.html">Pollution Certification</a></li>
+                                        <li><a href="Fire&safetyCertification.html">Fire & Safety Certification</a></li>
+                                        <li><a href="PASARA.html">Private Security Agency License (PASARA)</a></li>
+                                        <li><a href="cateringLicence.html">Catering License</a></li>
                                     </ul>
                                 </div>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <div class="sidebar-first">
+                            
+                                <div class="hr-div"><div class="hr-line1"></div></div>
+                            
+                                <!-- Consultant -->
+                                <div class="sidebar-first" data-category="Consultant">
                                     <h4>Consultant</h4>
                                     <ul>
-                                        <li><a href="ESI-Consultant.html"> ESI Consultant </a></li>
-                                        <li><a href="PF-Consultant.html"> PF Consultant </a></li>
-                                        <li><a href="ProfessionalTaxConsultant.html"> Professional Tax Consultant </a></li>
-                                        
-                                        <li><a href="PayrollProcessing.html"> Payroll Processing </a></li>
-                                        <li><a href="satutoryReturn.html"> Statutory Returns </a></li>
-                                        <li><a href="StandingOrder.html"> Standing Orders </a></li>
-                                        <li><a href="NightExtension.html"> Night Exemption </a></li>
-                                        <li class="subscribe"><a href="factoryPlanAprove.html"> Factory Plan Approval </a>
-                                        </li>
-                                        <li class="subscribe"><a href="CTEApprove.html"> CTE / CTO Approval </a></li>
-                                        <li class="subscribe"><a href=""> Compensation & Benefit </a>
-                                        </li>
-                                        <li class="subscribe"><a href="ComplianceAudit&Consultation.html"> Compliance Audit &
-                                                Consultation </a></li>
+                                        <li><a href="ESI-Consultant.html">ESI Consultant</a></li>
+                                        <li><a href="PF-Consultant.html">PF Consultant</a></li>
+                                        <li><a href="ProfessionalTaxConsultant.html">Professional Tax Consultant</a></li>
+                                        <li><a href="PayrollProcessing.html">Payroll Processing</a></li>
+                                        <li><a href="satutoryReturn.html">Statutory Returns</a></li>
+                                        <li><a href="StandingOrder.html">Standing Orders</a></li>
+                                        <li><a href="NightExtension.html">Night Exemption</a></li>
+                                        <li><a href="factoryPlanAprove.html">Factory Plan Approval</a></li>
+                                        <li><a href="CTEApprove.html">CTE / CTO Approval</a></li>
+                                        <li><a href="">Compensation & Benefit</a></li>
+                                        <li><a href="ComplianceAudit&Consultation.html">Compliance Audit & Consultation</a></li>
                                     </ul>
                                 </div>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <div class="sidebar-first">
-                                    <h4>Labor Compliance Audit </h4>
+                            
+                                <div class="hr-div"><div class="hr-line1"></div></div>
+                            
+                                <!-- Labor Compliance Audit -->
+                                <div class="sidebar-first" data-category="Labor Compliance Audit">
+                                    <h4>Labor Compliance Audit</h4>
                                     <ul>
-                                        <li><a href="factoryAuditConsultant.html"> Factory Audits </a></li>
-                                        <li><a href="contractLabourAuditConsultant.html"> Contract Labor Audits </a></li>
-                                        <li><a href="establishmentAudit.html"> Establishment Audits </a></li>
-                                        <li><a href="EHSAuditConsultant.html"> EHS Audits </a></li>
-                                        <li><a href="PASARA.html"> PASARA Audits </a></li>
-                                        <li><a href=""> Vendor Compliance Audits </a></li>
+                                        <li><a href="factoryAuditConsultant.html">Factory Audits</a></li>
+                                        <li><a href="contractLabourAuditConsultant.html">Contract Labor Audits</a></li>
+                                        <li><a href="establishmentAudit.html">Establishment Audits</a></li>
+                                        <li><a href="EHSAuditConsultant.html">EHS Audits</a></li>
+                                        <li><a href="PASARA.html">PASARA Audits</a></li>
+                                        <li><a href="">Vendor Compliance Audits</a></li>
                                     </ul>
                                 </div>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <div class="sidebar-first">
+                            
+                                <div class="hr-div"><div class="hr-line1"></div></div>
+                            
+                                <!-- Liaison Assistance -->
+                                <div class="sidebar-first" data-category="Liaison Assistance">
                                     <h4>Liaison Assistance</h4>
                                     <ul>
-                                        <li><a href=""> Client Billing Assistance </a></li>
-                                        <li><a href=""> Liaising with Authorities </a></li>
-                                        <li><a href=""> Handling Labor Departmental Inspections </a>
-                                        </li>
-                                        <li><a href=""> Handling Labor Departmental Notices Reply </a>
-                                        </li>
+                                        <li><a href="">Client Billing Assistance</a></li>
+                                        <li><a href="">Liaising with Authorities</a></li>
+                                        <li><a href="">Handling Labor Departmental Inspections</a></li>
+                                        <li><a href="">Handling Labor Departmental Notices Reply</a></li>
                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="hr-div"><div class="hr-line1"></div></div>
+
+                            <div class="help">
+                                <div class="help-content">
+                                    <h4>How can we help you?</h4>
+                                    <p>Contact us or submit a business enquiry online and find out how less you need to invest to get the best</p>
+                                    <img src="assets/images/call_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                    <button type="button" class="btn btn-outline-warning">Contact</button>
                                 </div>
                             </div>
                         </div>
@@ -470,14 +466,8 @@
                                     </div>
 
                                     <div class="part-2-top">
-                                        <h3>6. Labour Law Training and Workshops:</h3>
+                                        <h3>6. Employment Policy Development</h3>
                                         <div>
-                                            <p>
-                                                <b>Training for HR Teams and Managers: </b> Conducting workshops and
-                                                training
-                                                sessions for HR professionals, management teams, and employees on the
-                                                latest labor law updates and best practices for compliance.
-                                            </p>
                                             <p>
                                                 <b>Employment Policy Development:</b> Helping organizations create
                                                 comprehensive and legally compliant workplace policies, including codes
@@ -829,6 +819,8 @@
     <script src="assets/js/test.js?v=4
     "></script>
     <script src="assets/js/script1.js?v=4
+    "></script>
+    <script src="assets/js/search.js?v=4
     "></script>
 </body>
 

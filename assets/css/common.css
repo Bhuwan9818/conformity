@@ -305,3 +305,31 @@ a{
 }
 
 /* footer ends here  */
+
+
+.help{
+    padding: 1rem;
+    border: 1px solid rgb(247, 154, 48);
+    background-color: rgba(247, 154, 48, 0.192);
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+
+.help-content h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: 'Syne',sans-serif;
+}
+
+.help-content p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Roboto Mono',sans-serif;
+}
+
+.help-content button{
+    color: black !important;
+    font-family: 'Syne',sans-serif;
+}

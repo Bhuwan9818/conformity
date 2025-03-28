@@ -11,11 +11,11 @@ body {
 .sidebar {
     width: 100%;
     height: auto;
-    padding: 20px;
+    /* padding: 20px; */
     background: rgba(255, 255, 255, 0.2); /* Glass Effect */
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 /* Title Styling */
@@ -39,7 +39,7 @@ body {
     gap: 5px;
     padding: 6px;
     color: #000000;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(117, 117, 117, 0.1);
     border-radius: 8px;
     margin-bottom: 10px;
     font-family: 'Syne', sans-serif;
@@ -74,7 +74,8 @@ body {
 
 /* Hover Effect */
 .sidebar ul li:hover {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
+    /* background: linear-gradient(135deg, #b9b1b1, #ebd59a); */
+    background-color: #979797c0;
     transform: scale(1.05);
     color: #fff;
 }
