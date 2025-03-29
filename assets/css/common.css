@@ -75,9 +75,9 @@ html{
     z-index: 1000;
     display: none;
     position: absolute;
-    left: 0;
+    left: 45%;
     /* top: 3rem; */
-    width: 100%;
+    /* width: 100%; */
     background: transparent;
     /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
     padding: 3rem 0%;
@@ -391,4 +391,18 @@ a{
 #foot991 h5, #foot991 h6, #foot991 h4, #foot991 p{
     color: white;
 
+}
+
+.stay-hidden{
+    display: none !important;
+}
+
+@media (max-width: 991px){
+    .stay-hidden{
+        display: block !important;
+    }
+
+    .get-hidden{
+        display: none !important;
+    }
 }

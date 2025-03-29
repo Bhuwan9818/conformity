@@ -21,3 +21,17 @@ function filterServices() {
         section.style.display = matchFound ? "block" : "none";
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let navLinks = document.querySelectorAll(".right-active a");
+    let currentUrl = window.location.pathname;
+
+    navLinks.forEach(link => {
+        if (link.href.includes(currentUrl)) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
