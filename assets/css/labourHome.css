@@ -12,8 +12,8 @@
 }
 
 .part-2-top h3{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 700;
     font-family: 'Syne', sans-serif;
 }
 
@@ -40,13 +40,13 @@
     gap: .5rem;
 }
 
-.above-footer h3{
-    font-size: 2rem;
-    font-weight: 500;
+.above-footer h2{
+    font-size: 1.8rem;
+    font-weight: 600;
     font-family: 'Syne', sans-serif;
 }
 
 .above-footer p{
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: 'Roboto Mono', sans-serif;
 }

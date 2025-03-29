@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Syne', sans-serif;
-    background: #f4f4f4;
+    /* background: #f4f4f4; */
 }
 
 /* Sidebar Styling */
@@ -12,7 +12,9 @@ body {
     width: 100%;
     height: auto;
     /* padding: 20px; */
-    background: rgba(255, 255, 255, 0.2); /* Glass Effect */
+    /* background: rgba(255, 255, 255, 0.2); */
+    background-color: #fafafa;
+    /* background-color: #fff8e1; */
     backdrop-filter: blur(10px);
     border-radius: 15px;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
@@ -77,15 +79,15 @@ body {
     /* background: linear-gradient(135deg, #b9b1b1, #ebd59a); */
     background-color: #979797c0;
     transform: scale(1.05);
-    color: #fff;
+    /* color: #fff; */
 }
 
 .sidebar ul li :hover {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .sidebar ul li :hover a {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .sidebar ul li:hover i {
