@@ -82,14 +82,6 @@ body {
     /* color: #fff; */
 }
 
-.sidebar ul li :hover {
-    /* color: #fff; */
-}
-
-.sidebar ul li :hover a {
-    /* color: #fff; */
-}
-
 .sidebar ul li:hover i {
     color: #fff;
 }
