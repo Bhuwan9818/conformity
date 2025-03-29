@@ -17,7 +17,7 @@ body{
     letter-spacing: 4px;
 }
 
-.hrhover::after{
+#foot991 .hrhover::after{
     content: "";
     position: absolute;
     width: 0;
@@ -25,9 +25,22 @@ body{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: black;
+    background-color: #ffff;
     transition: width 0.4s ease-in-out;
   }
+
+  .hrhover::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    transition: width 0.4s ease-in-out;
+  }
+
   .hrhover:hover::after{
     width: 100%;
   }
@@ -36,6 +49,19 @@ body{
     display: inline-block; 
     position: relative;
     color: black;
+    text-decoration: none;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  #foot991 .hrhover:hover::after{
+    width: 100%;
+  }
+  
+  #foot991 .hrhover{
+    display: inline-block; 
+    position: relative;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     opacity: 0.8;
     cursor: pointer;
@@ -353,4 +379,16 @@ a{
     height: 100%;
     /* background-color: red; */
     object-fit: cover;
+}
+
+#foot991{
+    background-color: #141516d5;
+    padding: 1rem ;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#foot991 h5, #foot991 h6, #foot991 h4, #foot991 p{
+    color: white;
+
 }
