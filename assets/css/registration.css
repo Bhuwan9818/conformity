@@ -25,6 +25,13 @@
     text-align: center;
 }
 
+@media (max-width: 580px) {
+    .section-1-para{
+        padding: 0 !important;
+    }
+}
+
+
 .services {
     display: flex;
     justify-content: center;
