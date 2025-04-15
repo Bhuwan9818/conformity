@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/apple-touch-icon.png" type="image/x-icon">
-    <title>Registration</title>
+    <title>HOME</title>
     <link rel="stylesheet" href="assets/css/style.css?v=4
     ">
     <link rel="stylesheet" href="assets/css/common.css?v=4
     ">
     <link rel="stylesheet" href="assets/css/test.css?v=4
     ">
-    <link rel="stylesheet" href="assets/css/registration.css?v=4">
+    <link rel="stylesheet" href="assets/css/contact.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -25,12 +25,11 @@
 </head>
 
 <body>
-
-
     <div id="main">
 
         <div class="whatsapp_img">
-            <a href="https://wa.me/7701901010" target="_blank"><img src="assets/images/whatsapp.svg" alt="" class="img-whsapp"></a>
+            <a href="https://wa.me/7701901010" target="_blank"><img src="assets/images/whatsapp.svg" alt="" class="img-whsapp">
+            </a>
         </div>
 
         <nav class="navbar right-active navbar-expand-lg get-hidden">
@@ -114,7 +113,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active hrhover a-b" aria-current="page" href="index.html">Home</a>
                             </li>
-
+    
                             <li class="nav-item">
                                 <a class="nav-link active hrhover a-b" aria-current="page" href="#">About</a>
                             </li>
@@ -156,22 +155,162 @@
 
         <main>
             <section>
-                <div class="container section-1">
-                    <div class="section-1-text">
-                        <div>
-                            <h1>Audit & Advisory</h1>
+                <div class="section-1-wrapper">
+                    <div class="section-1-content">
+                        <div class="section-1-left">
+                            <div class="sidebar">
+                                <form class="d-flex form-sidebar" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search Services..."
+                                        id="searchBar" onkeyup="filterServices()">
+                                    <button type="button" class="btn btn-outline-warning">search</button>
+                                </form>
+
+                                <h2>Our Services</h2>
+
+                                <div class="hr-div">
+                                    <div class="hr-line1"></div>
+                                </div>
+
+                                <!-- Registration & License -->
+                                <div class="sidebar-first" data-category="Registration & License">
+                                    <h4>Registration & License</h4>
+                                    <ul>
+                                        <li><a href="interStateMigration.html">Inter-state Migrant Registration</a></li>
+                                        <li><a href="ShopandEstablishmentLicense.html">Shop and Establishment
+                                                License</a></li>
+                                        <li><a href="factoryAct.html">Factory Act License</a></li>
+                                        <li><a href="BOWCE-licence.html">BOCW License</a></li>
+                                        <li><a href="ContactLabourLicence.html">Contract Labor License</a></li>
+                                        <li><a href="ElectricalLicence.html">Electrical License</a></li>
+                                        <li><a href="tradeLicence.html">Trade License</a></li>
+                                        <li><a href="PollutionCertification.html">Pollution Certification</a></li>
+                                        <li><a href="Fire&safetyCertification.html">Fire & Safety Certification</a></li>
+                                        <li><a href="PASARA.html">Private Security Agency License (PASARA)</a></li>
+                                        <li><a href="cateringLicence.html">Catering License</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="hr-div">
+                                    <div class="hr-line1"></div>
+                                </div>
+
+                                <!-- Consultant -->
+                                <div class="sidebar-first" data-category="Consultant">
+                                    <h4>Consultant</h4>
+                                    <ul>
+                                        <li><a href="ESI-Consultant.html">ESI Consultant</a></li>
+                                        <li><a href="PF-Consultant.html">PF Consultant</a></li>
+                                        <li><a href="ProfessionalTaxConsultant.html">Professional Tax Consultant</a>
+                                        </li>
+                                        <li><a href="PayrollProcessing.html">Payroll Processing</a></li>
+                                        <li><a href="satutoryReturn.html">Statutory Returns</a></li>
+                                        <li><a href="StandingOrder.html">Standing Orders</a></li>
+                                        <li><a href="NightExtension.html">Night Exemption</a></li>
+                                        <li><a href="factoryPlanAprove.html">Factory Plan Approval</a></li>
+                                        <li><a href="CTEApprove.html">CTE / CTO Approval</a></li>
+                                        <li><a href="">Compensation & Benefit</a></li>
+                                        <li><a href="ComplianceAudit&Consultation.html">Compliance Audit &
+                                                Consultation</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="hr-div">
+                                    <div class="hr-line1"></div>
+                                </div>
+
+                                <!-- Labor Compliance Audit -->
+                                <div class="sidebar-first" data-category="Labor Compliance Audit">
+                                    <h4>Labor Compliance Audit</h4>
+                                    <ul>
+                                        <li><a href="factoryAuditConsultant.html">Factory Audits</a></li>
+                                        <li><a href="contractLabourAuditConsultant.html">Contract Labor Audits</a></li>
+                                        <li><a href="establishmentAudit.html">Establishment Audits</a></li>
+                                        <li><a href="EHSAuditConsultant.html">EHS Audits</a></li>
+                                        <li><a href="PASARA.html">PASARA Audits</a></li>
+                                        <li><a href="">Vendor Compliance Audits</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="hr-div">
+                                    <div class="hr-line1"></div>
+                                </div>
+
+                                <!-- Liaison Assistance -->
+                                <div class="sidebar-first" data-category="Liaison Assistance">
+                                    <h4>Liaison Assistance</h4>
+                                    <ul>
+                                        <li><a href="">Client Billing Assistance</a></li>
+                                        <li><a href="">Liaising with Authorities</a></li>
+                                        <li><a href="">Handling Labor Departmental Inspections</a></li>
+                                        <li><a href="">Handling Labor Departmental Notices Reply</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="hr-div">
+                                <div class="hr-line1"></div>
+                            </div>
+
+                            <div class="help-wrapper2">
+                                <div class="help2">
+                                    <div class="help-content">
+                                        <h4>How can we help you?</h4>
+                                        <p>Contact us or submit a business enquiry online and find out how less you need
+                                            to invest to get the best</p>
+
+                                        <button type="button" class="btn btn-outline-warning"><img
+                                                src="assets/images/call_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png"
+                                                alt="">Contact</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class='section-1-para'>
-                            <p>
-                                We are strong team of Advocates, CA’s and CS’s having rich experience in their fields and serving lots of organizations from years.
-                            </p>
-                            <p>
-                                Our aim is to complied each and every company in India. There are various Companies which wants to do compliance but they do not have expertise and amount to pay for compliances.
-                            </p>
-                            <p>
-                                We do audits of enterprises compliances and provide advice time to time for every single change in the law. We serve our services to lots of industries PAN India with the client satisfaction goal.
-                            </p>
+
+                        <div class="vr-div hide">
+                            <div class="vr-line"></div>
                         </div>
+
+                        <div class="section-1-right">
+                          <div class="section-1-contant">
+                            <div class="section-1-h1">
+                              <h2>
+                                Request Services
+                              </h2>
+                            </div>
+
+                            <div class="section-1-input">
+                              <form action="" class="input-list">
+                                <div class="input-field">
+                                  <!-- <label for="">First Name*</label> -->
+                                  <input type="text" placeholder="Enter your name*" required>
+                                </div>
+                                <div class="input-field">
+                                  <!-- <label for="">Service required*</label> -->
+                                  <input type="text" placeholder="Service required*" required>
+                                </div>
+                                <div class="input-field">
+                                  <!-- <label for="">Company Name</label> -->
+                                  <input type="text" placeholder="Company name*">
+                                </div>
+                                <div class="input-field">
+                                  <!-- <label for="">Email*</label> -->
+                                  <input type="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="input-field">
+                                  <!-- <label for="">Phone*</label> -->
+                                  <input type="tel" placeholder="Enter your phone number*" required>
+                                </div>
+                                <div class="input-field">
+                                  <!-- <label for="">Message*</label> -->
+                                  <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message*"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-outline-warning">Submit</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -228,7 +367,7 @@
                             <div class="contact-detail2">
                                 <div>
                                     <h5>HEAD OFFICE</h5>
-                                    <h6>Kh 88, PN 4, 20 -Point Colony Ashram Road Village Budhpur New Delhi-110036
+                                    <h6>KH 88, PN 4, 20 -Point Colony Ashram Road Village Budhpur New Delhi-110036
                                     </h6>
                                 </div>
                                 <div>

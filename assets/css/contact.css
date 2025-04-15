@@ -1,0 +1,11 @@
+.section-1-contant{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

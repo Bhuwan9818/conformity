@@ -24,9 +24,23 @@
 
     .above-footer p{
         font-size: 1.1rem !important;
-        
     }
 
+}
+
+@media (max-width: 480px){
+    .part-2-top h3{
+        font-size: 1.3rem !important;
+    }
+
+    .part-2-top b{
+        font-size: 1rem !important; 
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .above-footer p{
+        font-size: .9rem !important;
+    }
 }
 
 .part-2-top b{

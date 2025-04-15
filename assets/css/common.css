@@ -427,6 +427,16 @@ a{
     top: 30px;
 }
 
+.help2{
+    padding: 1rem;
+    border: 1px solid rgb(247, 154, 48);
+    background-color: rgba(247, 154, 48, 0.192);
+    border-radius: 5px;
+    margin-top: 3rem;
+    /* position: sticky; */
+    /* top: 30px; */
+}
+
 .help-content h4{
     font-size: 1.5rem;
     font-weight: 500;
@@ -455,6 +465,11 @@ a{
 
 .help-wrapper{
     height: 47%;
+}
+
+.help-wrapper2{
+    /* height: 47%; */
+    height:auto;
 }
 
 .vg-width{
