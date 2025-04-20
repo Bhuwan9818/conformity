@@ -18,6 +18,21 @@ body{
     height: 100%;
 }
 
+.nav-but{
+    padding: 10px 20px !important;
+    border-radius: 25px !important;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    margin-right: 3%;
+    border: none;
+    transition: cubic-bezier(1, 0, 0, 1) .2s;
+}
+
+.nav-but:hover{
+    background-color: #ff9800 !important;
+    color: white;
+}
+
 
 
 #main{
