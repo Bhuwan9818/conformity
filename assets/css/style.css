@@ -43,7 +43,29 @@ body{
     color: white;
 }
 
+.cont-btn1 i{
+    padding-right: 10px !important;
+}
 
+.cont-btn1 a{
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    border: none;
+    border: 1px solid white;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.cont-btn1 a:hover{
+    background-color: #ff9800 !important;
+    color: white;
+    transform: scale(1.1);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .2s;
+}
+
+.cont-btn1 a{
+    color: white;
+    text-decoration: none;
+}
 
 #main{
     border: 1px solid hsl(0, 0%, 0%); 
