@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssss", $name, $email, $phone, $message, $service, $company);
 
     if ($stmt->execute()) {
-        echo ",<h2>Thank you for your feedback!</h2><button class='btn btn-primary' onclick=\"window.location.href='index.html'\">Go Back</button>";
+        echo ",<h2>Thank you for your feedback!</h2><button class='btn btn-primary'><a href='index.html'>Go Back </a></button>";
     } else {
         echo "Error: " . $conn->error;
     }
