@@ -331,43 +331,52 @@
                                 </div>
 
                                 <div class="section-1-input">
-                                    <form action="" class="input-list">
+                                    <form action="assets/php/submit.php" method="POST" class="input-list">
                                         <div class="L-input">
                                             <div class="input-field">
                                                 <!-- <label for="">First Name*</label> -->
-                                                <input type="text" placeholder="Enter your name*" required />
+                                                <input type="text" placeholder="Enter your name*" id="name" name="name"
+                                                    required />
                                             </div>
                                             <div class="input-field">
                                                 <!-- <label for="">Service required*</label> -->
-                                                <input type="text" placeholder="Service required*" required />
+                                                <input type="text" placeholder="Service required*" required
+                                                    name="service" />
                                             </div>
                                             <div class="input-field">
                                                 <!-- <label for="">Company Name</label> -->
-                                                <input type="text" placeholder="Company name*" />
+                                                <input type="text" placeholder="Company name*" name="company" />
                                             </div>
                                             <div class="input-field">
                                                 <!-- <label for="">Email*</label> -->
-                                                <input type="email" placeholder="Enter your email" required />
+                                                <input type="email" placeholder="Enter your email" required
+                                                    name="email" />
                                             </div>
                                         </div>
                                         <div class="R-input">
                                             <div class="input-field">
                                                 <!-- <label for="">Phone*</label> -->
-                                                <input type="tel" placeholder="Enter your phone number*" required />
+                                                <input type="tel" placeholder="Enter your phone number*" required
+                                                    name="phone" />
                                             </div>
+                                            <!-- <div class="input-field">
+                                                <textarea type="tel" placeholder="Enter your phone number*" required
+                                                    name="message"></textarea>
+                                            </div> -->
                                             <div class="input-field textarea1">
                                                 <!-- <label for="">Message*</label> -->
-                                                <textarea name="" id="" cols="30" rows="10"
-                                                    placeholder="Enter your message*"></textarea>
-
-                                                    <div>
-                                                        <button type="submit" class=" contact-btn">
-                                                            Submit
-                                                        </button>
-                                                    </div>
+                                                <textarea type="tel" placeholder="Enter your phone number*" required
+                                                name="message" cols="30" rows="10"></textarea>
+                                                <!-- <input name="" id="" 
+                                                    placeholder="Enter your message*" /> -->
+                                                <div>
+                                                    <button type="submit" class=" contact-btn">
+                                                        Submit
+                                                    </button>
+                                                </div>
                                             </div>
 
-                                            
+                                            <p id="responseMessage"></p>
                                         </div>
                                     </form>
                                 </div>
