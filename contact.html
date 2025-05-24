@@ -251,7 +251,6 @@
                 .contact-social a[title="Facebook"]:hover { background: #1877f3; border-color: #1877f3; }
                 .contact-social a[title="Twitter"]:hover { background: #1da1f2; border-color: #1da1f2; }
                 .contact-social a[title="LinkedIn"]:hover { background: #0077b5; border-color: #0077b5; }
-                .contact-social a[title="YouTube"]:hover { background: #ff0000; border-color: #ff0000; }
                 .contact-info {
                     margin-top: 10px;
                     display: flex;
@@ -286,12 +285,14 @@
                 .contact-right {
                     flex: 1 1 420px;
                     padding: 48px 48px 48px 36px;
-                    background: #fff;
+                    background: linear-gradient(120deg, #fff 60%, #fff8f1 100%);
                     min-width: 340px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     position: relative;
+                    box-shadow: 0 0 0 0 #ff9800;
+                    z-index: 2;
                 }
                 .contact-right h2 {
                     color: #ff9800;
@@ -369,6 +370,10 @@
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    width: 100%;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 3;
                 }
                 .contact-form button i {
                     font-size: 1.2em;
@@ -451,7 +456,7 @@
                     </h4>
                     <div class="contact-social">
                         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="Instagram"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.linkedin.com/company/conformity-alliance/" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                     <div class="contact-info">
@@ -461,7 +466,7 @@
                         </p>
                         <p>
                             <i class="fa-solid fa-envelope"></i>
-                            <span><strong>Email Us:</strong> info@conformityalliance.com>
+                            <span><strong>Email Us:</strong> info@conformityalliance.com</span>
                         </p>
                         <p>
                             <i class="fa-solid fa-location-dot"></i>
@@ -503,23 +508,10 @@
                             <button type="submit" class="contact-btn">
                                 <i class="fa-solid fa-paper-plane"></i> Submit
                             </button>
-                            <div class="success-message" id="success-message">
-                                <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent.
-                            </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <script>
-                // Show success message on submit (demo only)
-                document.getElementById('contact-form').addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    var msg = document.getElementById('success-message');
-                    msg.style.display = 'flex';
-                    setTimeout(function () { msg.style.display = 'none'; }, 4000);
-                    this.reset();
-                });
-            </script>
         </main>
 
         <div class="hr-div">
