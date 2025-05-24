@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-panel,
+    .right-panel {
+      padding: 30px;
+      flex: 1;
+    }
+
+    .left-panel {
+      background: #f2f2f2;
+    }
+
+    .left-panel h3 {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .right-panel h2 {
+      margin-bottom: 20px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .success-message {
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h3>Contact Details</h3>
+      <p>We move fast. Send us your email, we’ll make sure you never miss a thing.</p>
+      <h4>Follow us on:</h4>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">YouTube</a>
+      </div>
+      <div class="contact-info">
+        <p><strong>Contact No.:</strong> +91-9050576838</p>
+        <p><strong>Email Us:</strong> info@praansconsultech.com</p>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <h2>Get In Touch</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Enter Email" required />
+        <input type="text" placeholder="Contact No." required />
+        <textarea placeholder="Enter Message" rows="5" required></textarea>
+        <button type="submit">SUBMIT REQUEST</button>
+        <p class="success-message" style="display:none;">Success!</p>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+
+<div class="section-1-left">
+  <div class="sidebar">
+    <form class="d-flex form-sidebar" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search Services..." id="searchBar"
+        onkeyup="filterServices()" />
+      <button type="button" class="btn btn-outline-warning">
+        search
+      </button>
+    </form>
+
+    <h2>Our Services</h2>
+
+    <div class="hr-div">
+      <div class="hr-line1"></div>
+    </div>
+
+    <!-- Registration & License -->
+    <div class="sidebar-first" data-category="Registration & License">
+      <h4>Registration & License</h4>
+      <ul id="service-list">
+        <li>
+          <a href="interStateMigration.html">Inter-state Migrant Registration</a>
+        </li>
+        <li>
+          <a href="ShopandEstablishmentLicense.html">Shop and Establishment
+            License</a>
+        </li>
+        <li><a href="factoryAct.html">Factory Act License</a></li>
+        <li><a href="BOWCE-licence.html">BOCW License</a></li>
+        <li>
+          <a href="ContactLabourLicence.html">Contract Labor License</a>
+        </li>
+        <li class="more-service d-none">
+          <a href="ElectricalLicence.html">Electrical License</a>
+        </li>
+        <li class="more-service d-none"><a href="tradeLicence.html">Trade License</a></li>
+        <li class="more-service d-none">
+          <a href="PollutionCertification.html">Pollution Certification</a>
+        </li>
+        <li class="more-service d-none">
+          <a href="Fire&safetyCertification.html">Fire & Safety Certification</a>
+        </li>
+        <li class="more-service d-none">
+          <a href="PASARA.html">Private Security Agency License (PASARA)</a>
+        </li>
+        <li class="more-service d-none">
+          <a href="cateringLicence.html">Catering License</a>
+        </li>
+      </ul>
+      <button id="show-more-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
+    </div>
+
+    <div class="hr-div">
+      <div class="hr-line1"></div>
+    </div>
+
+    <!-- Consultant -->
+    <div class="sidebar-first" data-category="Consultant">
+      <h4>Consultant</h4>
+      <ul id="consultant-list">
+        <li><a href="ESI-Consultant.html">ESI Consultant</a></li>
+        <li><a href="PF-Consultant.html">PF Consultant</a></li>
+        <li>
+          <a href="ProfessionalTaxConsultant.html">Professional Tax Consultant</a>
+        </li>
+        <li>
+          <a href="PayrollProcessing.html">Payroll Processing</a>
+        </li>
+        <li>
+          <a href="satutoryReturn.html">Statutory Returns</a>
+        </li>
+        <li class="more-consultant d-none"><a href="StandingOrder.html">Standing Orders</a></li>
+        <li class="more-consultant d-none"><a href="NightExtension.html">Night Exemption</a></li>
+        <li class="more-consultant d-none">
+          <a href="factoryPlanAprove.html">Factory Plan Approval</a>
+        </li>
+        <li class="more-consultant d-none"><a href="CTEApprove.html">CTE / CTO Approval</a></li>
+        <li class="more-consultant d-none"><a href="">Compensation & Benefit</a></li>
+        <li class="more-consultant d-none">
+          <a href="ComplianceAudit&Consultation.html">Compliance Audit & Consultation</a>
+        </li>
+      </ul>
+      <button id="show-more-consultant-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
+    </div>
+
+    <div class="hr-div">
+      <div class="hr-line1"></div>
+    </div>
+
+    <!-- Labor Compliance Audit -->
+    <div class="sidebar-first" data-category="Labor Compliance Audit">
+      <h4>Labor Compliance Audit</h4>
+      <ul id="audit-list">
+        <li>
+          <a href="factoryAuditConsultant.html">Factory Audits</a>
+        </li>
+        <li>
+          <a href="contractLabourAuditConsultant.html">Contract Labor Audits</a>
+        </li>
+        <li>
+          <a href="establishmentAudit.html">Establishment Audits</a>
+        </li>
+        <li class="more-audit d-none"><a href="EHSAuditConsultant.html">EHS Audits</a></li>
+        <li class="more-audit d-none"><a href="PASARA.html">PASARA Audits</a></li>
+        <li class="more-audit d-none"><a href="">Vendor Compliance Audits</a></li>
+      </ul>
+      <button id="show-more-audit-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
+    </div>
+
+    <div class="hr-div">
+      <div class="hr-line1"></div>
+    </div>
+
+    <!-- Liaison Assistance -->
+    <div class="sidebar-first" data-category="Liaison Assistance">
+      <h4>Liaison Assistance</h4>
+      <ul id="liaison-list">
+        <li><a href="">Client Billing Assistance</a></li>
+        <li><a href="">Liaising with Authorities</a></li>
+        <li><a href="">Handling Labor Departmental Inspections</a></li>
+        <li class="more-liaison d-none"><a href="">Handling Labor Departmental Notices Reply</a></li>
+      </ul>
+      <button id="show-more-liaison-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
+    </div>
+  </div>
+  <script>
+    // Registration & License
+    document.getElementById('show-more-btn').onclick = function () {
+      document.querySelectorAll('.more-service').forEach(e => e.classList.toggle('d-none'));
+      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
+    };
+    // Consultant
+    document.getElementById('show-more-consultant-btn').onclick = function () {
+      document.querySelectorAll('.more-consultant').forEach(e => e.classList.toggle('d-none'));
+      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
+    };
+    // Labor Compliance Audit
+    document.getElementById('show-more-audit-btn').onclick = function () {
+      document.querySelectorAll('.more-audit').forEach(e => e.classList.toggle('d-none'));
+      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
+    };
+    // Liaison Assistance
+    document.getElementById('show-more-liaison-btn').onclick = function () {
+      document.querySelectorAll('.more-liaison').forEach(e => e.classList.toggle('d-none'));
+      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
+    };
+  </script>
+
+  <div class="hr-div">
+    <div class="hr-line1"></div>
+  </div>
+
+  <div class="help-wrapper2">
+    <div class="help2">
+      <div class="help-content">
+        <h4>How can we help you?</h4>
+        <p>
+          Contact us or submit a business enquiry online and find
+          out how less you need to invest to get the best
+        </p>
+
+        <button type="button" class="btn btn-outline-warning">
+          <img src="assets/images/call_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png" alt="" />Contact
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section>
+  <div class="section-1-wrapper">
+    <div class="section-1-content">
+
+
+      <div class="vr-div hide">
+        <div class="vr-line"></div>
+      </div>
+
+      <div class="section-1-right">
+        <div class="section-1-contant">
+          <div class="section-1-h1">
+            <h2>Request Services</h2>
+          </div>
+
+          <div class="section-1-input">
+            <form action="assets/php/send_email.php" method="POST" class="input-list">
+              <div class="L-input">
+                <div class="input-field">
+                  <!-- <label for="">First Name*</label> -->
+                  <input type="text" placeholder="Enter your name*" id="name" name="name" required />
+                </div>
+                <div class="input-field">
+                  <!-- <label for="">Service required*</label> -->
+                  <input type="text" placeholder="Service required*" required name="service" />
+                </div>
+                <div class="input-field">
+                  <!-- <label for="">Company Name</label> -->
+                  <input type="text" placeholder="Company name*" name="company" />
+                </div>
+                <div class="input-field">
+                  <!-- <label for="">Email*</label> -->
+                  <input type="email" placeholder="Enter your email" required name="email" />
+                </div>
+              </div>
+              <div class="R-input">
+                <div class="input-field">
+                  <!-- <label for="">Phone*</label> -->
+                  <input type="tel" placeholder="Enter your phone number*" required name="phone" />
+                </div>
+                <div class="input-field textarea1">
+                  <!-- <label for="">Message*</label> -->
+                  <textarea type="text" placeholder="Enter your message*" required name="message" cols="30"
+                    rows="10"></textarea>
+                  <!-- <input name="" id="" 
+                                                    placeholder="Enter your message*" /> -->
+                  <div>
+                    <button type="submit" class=" contact-btn">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+
+                <!-- <p id="responseMessage"></p> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

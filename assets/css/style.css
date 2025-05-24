@@ -137,6 +137,8 @@ nav ul li a{
 
 .section-1-left{
     height: 100%;
+    display: flex;
+    flex-direction: column;
     
 }
 
