@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company = htmlspecialchars($_POST['company']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "bhuwansingh886043@gmail.com"; // Replace with your Gmail address
+    $to = "info@conformityalliance.com"; // Replace with your Gmail address
     $subject = "New Contact Form Submission";
     $body = "Name: $name\nEmail: $email\nphone: $phone\nservice: $service\ncompany: $company\nMessage:$message";
     $headers = "From: pankaj.k@conformityalliance.in";
