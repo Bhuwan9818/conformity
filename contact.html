@@ -330,49 +330,49 @@
                                     <h2>Request Services</h2>
                                 </div>
 
-                                <div class="section-1-input h-100 d-flex align-items-center justify-content-center" style="min-height: 600px;">
-                                    <form action="assets/php/send_email.php" method="POST" class="input-list contact-form shadow-lg p-5 rounded-4 bg-white w-100" style="max-width: 600px;">
-                                        <div class="text-center mb-4">
-                                            <div class="d-inline-flex align-items-center justify-content-center mb-2" style="background: #f9f9f9; border-radius: 50%; width: 60px; height: 60px;">
-                                                <i class="fa fa-envelope fa-2x text-warning"></i>
+                                <div class="section-1-input">
+                                    <form action="assets/php/send_email.php" method="POST" class="input-list">
+                                        <div class="L-input">
+                                            <div class="input-field">
+                                                <!-- <label for="">First Name*</label> -->
+                                                <input type="text" placeholder="Enter your name*" id="name" name="name"
+                                                    required />
                                             </div>
-                                            <h3 class="fw-bold mb-1" style="letter-spacing: 1px;">Get in Touch</h3>
-                                            <p class="text-muted mb-0" style="font-size: 1.1rem;">Fill out the form and our team will get back to you soon.</p>
+                                            <div class="input-field">
+                                                <!-- <label for="">Service required*</label> -->
+                                                <input type="text" placeholder="Service required*" required
+                                                    name="service" />
+                                            </div>
+                                            <div class="input-field">
+                                                <!-- <label for="">Company Name</label> -->
+                                                <input type="text" placeholder="Company name*" name="company" />
+                                            </div>
+                                            <div class="input-field">
+                                                <!-- <label for="">Email*</label> -->
+                                                <input type="email" placeholder="Enter your email" required
+                                                    name="email" />
+                                            </div>
                                         </div>
-                                        <div class="row g-4">
-                                            <div class="col-md-6">
-                                                <div class="mb-2">
-                                                    <label for="name" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control form-control-lg rounded-3" placeholder="Enter your name" id="name" name="name" required />
-                                                </div>
-                                                <div class="mb-2">
-                                                    <label for="service" class="form-label fw-semibold">Service Required <span class="text-danger">*</span></label>
-                                                    <input type="text" class="form-control form-control-lg rounded-3" placeholder="Service required" id="service" name="service" required />
-                                                </div>
-                                                <div class="mb-2">
-                                                    <label for="company" class="form-label fw-semibold">Company Name</label>
-                                                    <input type="text" class="form-control form-control-lg rounded-3" placeholder="Company name" id="company" name="company" />
-                                                </div>
-                                                <div class="mb-2">
-                                                    <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
-                                                    <input type="email" class="form-control form-control-lg rounded-3" placeholder="Enter your email" id="email" name="email" required />
-                                                </div>
+                                        <div class="R-input">
+                                            <div class="input-field">
+                                                <!-- <label for="">Phone*</label> -->
+                                                <input type="tel" placeholder="Enter your phone number*" required
+                                                    name="phone" />
                                             </div>
-                                            <div class="col-md-6 d-flex flex-column justify-content-between">
-                                                <div class="mb-2">
-                                                    <label for="phone" class="form-label fw-semibold">Phone <span class="text-danger">*</span></label>
-                                                    <input type="tel" class="form-control form-control-lg rounded-3" placeholder="Enter your phone number" id="phone" name="phone" required />
-                                                </div>
-                                                <div class="mb-2 flex-grow-1 d-flex flex-column">
-                                                    <label for="message" class="form-label fw-semibold">Message <span class="text-danger">*</span></label>
-                                                    <textarea class="form-control form-control-lg rounded-3 flex-grow-1" placeholder="Enter your message" id="message" name="message" rows="6" required></textarea>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <button type="submit" class="btn btn-warning btn-lg w-100 shadow-sm rounded-3" style="font-weight: 600; letter-spacing: 1px;">
-                                                        <i class="fa fa-paper-plane me-2"></i>Submit Request
+                                            <div class="input-field textarea1">
+                                                <!-- <label for="">Message*</label> -->
+                                                <textarea type="text" placeholder="Enter your message*" required
+                                                name="message" cols="30" rows="10"></textarea>
+                                                <!-- <input name="" id="" 
+                                                    placeholder="Enter your message*" /> -->
+                                                <div>
+                                                    <button type="submit" class=" contact-btn">
+                                                        Submit
                                                     </button>
                                                 </div>
                                             </div>
+
+                                            <!-- <p id="responseMessage"></p> -->
                                         </div>
                                     </form>
                                 </div>
