@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/labourHome.css?v=4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
@@ -168,113 +169,206 @@
             </div>
         </nav>
 
-        <div class="hr-div">
-            <div class="hr-line5"></div>
-        </div>
-
         <main>
             <section>
+                <style>
+                    .home-services-section {
+                        position: relative;
+                        width: 100vw;
+                        min-height: 340px;
+                        height: 60vh;
+                        max-height: 520px;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        margin-bottom: 44px;
+                        border-radius: 24px;
+                        box-shadow: 0 8px 36px rgba(36, 44, 71, 0.10);
+                        background: #f7f7f7;
+                    }
+
+                    .home-services-image-bg {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: 1;
+                        filter: brightness(0.78) blur(0.5px);
+                        transition: filter 0.3s;
+                    }
+
+                    .home-services-overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100vw;
+                        height: 100%;
+                        background: linear-gradient(90deg, rgba(36, 44, 71, 0.38) 0%, rgba(255, 255, 255, 0.08) 100%);
+                        z-index: 2;
+                        pointer-events: none;
+                    }
+
+                    .home-services-menu {
+                        position: relative;
+                        z-index: 3;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 22px;
+                        min-width: 320px;
+                        max-width: 340px;
+                        padding: 50px 36px 54px 38px;
+                        border-radius: 24px;
+                        margin: 40px 0 40px 48px;
+                        background: rgba(255, 255, 255, 0.93);
+                        box-shadow: 0 4px 24px rgba(36, 44, 71, 0.11);
+                    }
+
+                    .service-card {
+                        background: rgba(255, 255, 255, 0.82);
+                        border-radius: 12px;
+                        box-shadow: 0 2px 12px rgba(36, 44, 71, 0.10);
+                        padding: 18px 26px 18px 18px;
+                        display: flex;
+                        align-items: center;
+                        gap: 18px;
+                        font-size: 1.13rem;
+                        font-weight: 600;
+                        color: #232526;
+                        border-left: 4px solid #f19e39;
+                        transition: box-shadow 0.22s, border-color 0.22s, background 0.22s, color 0.22s, transform 0.18s;
+                        cursor: pointer;
+                        min-height: 58px;
+                        position: relative;
+                        overflow: hidden;
+                        letter-spacing: 0.01em;
+                    }
+
+                    .service-card .service-icon {
+                        font-size: 1.25rem;
+                        color: #fff;
+                        background: linear-gradient(135deg, #f19e39 0%, #f37021 100%);
+                        border-radius: 8px;
+                        padding: 10px 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-width: 38px;
+                        min-height: 38px;
+                        box-shadow: 0 2px 8px rgba(241, 158, 57, 0.13);
+                        transition: background 0.22s, color 0.22s;
+                    }
+
+                    .service-card.active,
+                    .service-card:hover {
+                        background: linear-gradient(90deg, #f19e39 0%, #f37021 100%);
+                        color: #fff;
+                        border-left: 4px solid #232526;
+                        box-shadow: 0 8px 28px rgba(241, 158, 57, 0.18);
+                        transform: translateY(-2px) scale(1.035);
+                    }
+
+                    .service-card.active .service-icon,
+                    .service-card:hover .service-icon {
+                        background: #fff;
+                        color: #f37021;
+                        box-shadow: 0 2px 12px rgba(241, 158, 57, 0.13);
+                    }
+
+                    .service-card::after {
+                        content: "";
+                        position: absolute;
+                        right: 18px;
+                        top: 50%;
+                        transform: translateY(-50%) scale(0.9);
+                        width: 14px;
+                        height: 14px;
+                        background: url('assets/images/arrow-right.svg') no-repeat center center/contain;
+                        opacity: 0.13;
+                        transition: opacity 0.2s;
+                        pointer-events: none;
+                    }
+
+                    .service-card.active::after,
+                    .service-card:hover::after {
+                        opacity: 0.38;
+                    }
+
+                    @media (max-width: 1100px) {
+                        .home-services-section {
+                            min-height: 220px;
+                            border-radius: 16px;
+                            height: 38vh;
+                        }
+
+                        .home-services-menu {
+                            min-width: 0;
+                            max-width: 100vw;
+                            margin: 18px 0 18px 10px;
+                            border-radius: 16px;
+                            padding: 18px 8px 18px 12px;
+                            gap: 10px;
+                        }
+
+                        .service-card {
+                            font-size: 0.98rem;
+                            padding: 10px 10px 10px 10px;
+                            min-height: 38px;
+                        }
+                    }
+
+                    @media (max-width: 700px) {
+                        .home-services-section {
+                            min-height: 120px;
+                            border-radius: 0;
+                            margin-bottom: 18px;
+                            height: 220px;
+                        }
+
+                        .home-services-menu {
+                            margin: 8px 0 8px 0;
+                            border-radius: 0;
+                            padding: 8px 2px 8px 4px;
+                            gap: 6px;
+                        }
+
+                        .service-card {
+                            font-size: 0.93rem;
+                            padding: 8px 6px 8px 8px;
+                            min-height: 32px;
+                        }
+                    }
+                </style>
+                <div class="home-services-section mt-5">
+                    <img src="assets/images/h2.jpeg" alt="Labour Law Services" class="home-services-image-bg" />
+                    <div class="home-services-overlay"></div>
+                    <div class="home-services-menu">
+                        <div class="service-card">
+                            <span class="service-icon"><i class="fa-solid fa-id-card"></i></span>
+                            Registration / Licences
+                        </div>
+                        <div class="service-card">
+                            <span class="service-icon"><i class="fa-solid fa-briefcase"></i></span>
+                            Compliance Process Outsourcing
+                        </div>
+                        <div class="service-card">
+                            <span class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                            Audit & Advisory
+                        </div>
+                        <div class="service-card">
+                            <span class="service-icon"><i class="fa-solid fa-calendar-check"></i></span>
+                            Compliance Calendar
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class="section-1-wrapper">
                     <div class="section-1-content">
                         <div class="section-1-left">
-                            <div class="sidebar">
-                                <form class="d-flex form-sidebar" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search Services..."
-                                        id="searchBar" onkeyup="filterServices()">
-                                    <button type="button" class="btn btn-outline-warning">search</button>
-                                </form>
-
-                                <h2>Our Services</h2>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <!-- Registration & License -->
-                                <div class="sidebar-first" data-category="Registration & License">
-                                    <h4>Registration & License</h4>
-                                    <ul>
-                                        <li><a href="interStateMigration.html">Inter-state Migrant Registration</a></li>
-                                        <li><a href="ShopandEstablishmentLicense.html">Shop and Establishment
-                                                License</a></li>
-                                        <li><a href="factoryAct.html">Factory Act License</a></li>
-                                        <li><a href="BOWCE-licence.html">BOCW License</a></li>
-                                        <li><a href="ContactLabourLicence.html">Contract Labor License</a></li>
-                                        <li><a href="ElectricalLicence.html">Electrical License</a></li>
-                                        <li><a href="tradeLicence.html">Trade License</a></li>
-                                        <li><a href="PollutionCertification.html">Pollution Certification</a></li>
-                                        <li><a href="Fire&safetyCertification.html">Fire & Safety Certification</a></li>
-                                        <li><a href="PASARA.html">Private Security Agency License (PASARA)</a></li>
-                                        <li><a href="cateringLicence.html">Catering License</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="hr-div">
-                                    <div class="hr-line1"></div>
-                                </div>
-
-                                <div class="more-liaison d-none">
-                                    <!-- Consultant -->
-                                    <div class="sidebar-first" data-category="Consultant">
-                                        <h4>Consultant</h4>
-                                        <ul>
-                                            <li><a href="ESI-Consultant.html">ESI Consultant</a></li>
-                                            <li><a href="PF-Consultant.html">PF Consultant</a></li>
-                                            <li><a href="ProfessionalTaxConsultant.html">Professional Tax Consultant</a>
-                                            </li>
-                                            <li><a href="PayrollProcessing.html">Payroll Processing</a></li>
-                                            <li><a href="satutoryReturn.html">Statutory Returns</a></li>
-                                            <li><a href="StandingOrder.html">Standing Orders</a></li>
-                                            <li><a href="NightExtension.html">Night Exemption</a></li>
-                                            <li><a href="factoryPlanAprove.html">Factory Plan Approval</a></li>
-                                            <li><a href="CTEApprove.html">CTE / CTO Approval</a></li>
-                                            <li><a href="">Compensation & Benefit</a></li>
-                                            <li><a href="ComplianceAudit&Consultation.html">Compliance Audit &
-                                                    Consultation</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line1"></div>
-                                    </div>
-
-                                    <!-- Labor Compliance Audit -->
-                                    <div class="sidebar-first" data-category="Labor Compliance Audit">
-                                        <h4>Labor Compliance Audit</h4>
-                                        <ul>
-                                            <li><a href="factoryAuditConsultant.html">Factory Audits</a></li>
-                                            <li><a href="contractLabourAuditConsultant.html">Contract Labor Audits</a>
-                                            </li>
-                                            <li><a href="establishmentAudit.html">Establishment Audits</a></li>
-                                            <li><a href="EHSAuditConsultant.html">EHS Audits</a></li>
-                                            <li><a href="PASARA.html">PASARA Audits</a></li>
-                                            <li><a href="">Vendor Compliance Audits</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line1"></div>
-                                    </div>
-
-                                    <!-- Liaison Assistance -->
-                                    <div class="sidebar-first" data-category="Liaison Assistance">
-                                        <h4>Liaison Assistance</h4>
-                                        <ul>
-                                            <li><a href="">Client Billing Assistance</a></li>
-                                            <li><a href="">Liaising with Authorities</a></li>
-                                            <li><a href="">Handling Labor Departmental Inspections</a></li>
-                                            <li><a href="">Handling Labor Departmental Notices Reply</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <button id="show-more-liaison-btn" class="btn btn-link p-0"
-                                    style="font-size: 15px; color: #F19E39; font-weight: 600; letter-spacing: 0.5px; transition: background 0.3s, color 0.3s; border-radius: 5px; padding: 4px 14px; display: flex; align-self: center; justify-self: center; text-decoration: none; box-shadow: 0 2px 8px rgba(241,158,57,0.08);"><i
-                                        class="fa fa-chevron-down" style="margin-right: 6px;"></i>More...</button>
-                            </div>
-
-                            <div class="hr-div">
-                                <div class="hr-line1"></div>
-                            </div>
 
                             <div class="help-wrapper">
                                 <div class="help">
@@ -305,388 +399,17 @@
                             <div class="right-content">
                                 <h1>A Labour Law Consultant Service </h1>
                                 <p>
-                                    <span class="mid-imp">A Labour Law Consultant Service</span> provides professional
+                                    <span class="mid-imp">A Labour Law Consultant Service</span> provides
+                                    professional
                                     advisory and legal services
                                     related to labor laws and regulations. These services are aimed at helping
                                     businesses, employers, and even employees navigate the complexities of labor
-                                    legislation, ensuring compliance with applicable laws, and resolving labor disputes.
+                                    legislation, ensuring compliance with applicable laws, and resolving labor
+                                    disputes.
                                     A Labour Law Consultant specializes in understanding national and international
                                     labor laws, interpreting them for businesses, and advising on how to manage
                                     employment issues effectively.
                                 </p>
-
-                                <div class="hr-div">
-                                    <div class="hr-line"></div>
-                                </div>
-
-                                <div class="d-none more-right-1">
-                                    <div class="home-part-2">
-                                        <h2>Key Services Provided by Labour Law Consultants:</h2>
-                                        <div class="part-2-top">
-                                            <h3>1. Labour Law Compliance Advisory:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Compliance with Local Labour Laws: </b> A consultant helps
-                                                    businesses
-                                                    stay
-                                                    compliant
-                                                    with local, regional, and national labor laws. This may include
-                                                    minimum
-                                                    wage
-                                                    laws, working hours, employee benefits, workplace safety standards,
-                                                    and
-                                                    more.
-                                                </p>
-                                                <p>
-                                                    <b>Employment Contracts:</b> Drafting or reviewing employment
-                                                    contracts
-                                                    to
-                                                    ensure they
-                                                    comply with labor laws and clearly define terms such as wages,
-                                                    benefits,
-                                                    working
-                                                    hours, and termination procedures.
-                                                </p>
-                                                <p>
-                                                    Statutory Benefits and Obligations: Advising on mandatory statutory
-                                                    benefits, such as gratuity, provident fund, employee state insurance
-                                                    (ESI),
-                                                    and other social security contributions.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>2. Employee Rights Protection:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Protection from Discrimination:</b> Ensuring that businesses are
-                                                    adhering to
-                                                    anti-discrimination laws, providing a workplace free from harassment
-                                                    or
-                                                    discrimination based on race, gender, age, religion, disability, or
-                                                    other protected characteristics.
-                                                </p>
-                                                <p>
-                                                    <b>Workplace Harassment and Disputes:</b> Assisting businesses with
-                                                    policies
-                                                    for preventing workplace harassment (sexual, racial, or otherwise)
-                                                    and
-                                                    helping resolve disputes that arise from employee grievances.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>3. Dispute Resolution:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Mediation and Arbitration:</b> Helping resolve disputes between
-                                                    employers
-                                                    and employees without going to court, using mediation and
-                                                    arbitration
-                                                    techniques.
-                                                </p>
-                                                <p>
-                                                    <b>Grievance Handling:</b>Providing assistance in handling employee
-                                                    grievances
-                                                    effectively through proper channels and resolving conflicts before
-                                                    they
-                                                    escalate.
-                                                </p>
-
-                                                <p>
-                                                    <b>Representation in Labour Courts:</b>In case of disputes that
-                                                    cannot
-                                                    be
-                                                    resolved internally, consultants can represent businesses or
-                                                    employees
-                                                    in labor court cases.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="part-2-top">
-                                            <h3>4. Employee Benefits Advisory:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Designing Employee Benefit Plans:</b> Helping companies design
-                                                    competitive
-                                                    employee benefit plans that are compliant with legal requirements
-                                                    and
-                                                    align with business goals.
-                                                </p>
-                                                <p>
-                                                    <b>Leave Management:</b> Guidance on statutory leaves such as
-                                                    maternity
-                                                    leave,
-                                                    sick leave, vacation leave, and public holidays, ensuring proper
-                                                    documentation and compliance.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>5. Health and Safety Compliance:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Workplace Safety Regulations:</b>Assisting businesses in adhering
-                                                    to
-                                                    health
-                                                    and safety laws, including the provision of a safe work environment,
-                                                    safety equipment, and the training of employees on workplace
-                                                    hazards.
-                                                </p>
-                                                <p>
-                                                    <b>Workplace Safety Audits:</b> Conducting audits to ensure that the
-                                                    workplace
-                                                    complies with safety laws and best practices, reducing the risk of
-                                                    accidents and injuries.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>6. Employment Policy Development</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Employment Policy Development:</b> Helping organizations create
-                                                    comprehensive and legally compliant workplace policies, including
-                                                    codes
-                                                    of conduct, anti-discrimination policies, and safety protocols.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>7. Representation in Labour Disputes:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Unfair Termination or Disciplinary Actions:</b> Providing legal
-                                                    guidance on
-                                                    handling cases of unfair dismissal, wrongful termination, or
-                                                    employee
-                                                    misconduct.
-                                                </p>
-                                                <p>
-                                                    <b>Collective Bargaining and Union Relations: </b> Advising
-                                                    businesses
-                                                    on their
-                                                    obligations regarding employee unions, collective bargaining
-                                                    agreements,
-                                                    and resolving disputes between the union and the employer.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>8. Legal Risk Assessment:</h3>
-                                            <div>
-                                                <p>
-                                                    <b>Legal Audits:</b> Conducting thorough audits of a company’s HR
-                                                    policies,
-                                                    contracts, and labor practices to ensure they are in line with
-                                                    current
-                                                    labor laws and regulations.
-                                                </p>
-                                                <p>
-                                                    <b>Risk Mitigation:</b> Identifying potential legal risks related to
-                                                    labor laws
-                                                    and advising businesses on steps to mitigate those risks, such as
-                                                    improving policies, training, or documentation.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3> 9. Corporate Restructuring and Labour Law Impact:</h3>
-                                            <div>
-                                                <p>
-                                                    Handling Redundancies and Layoffs**: Offering advice on the legal
-                                                    processes involved in downsizing, layoffs, or corporate
-                                                    restructuring,
-                                                    including the rights of employees, severance packages, and
-                                                    compensation.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line"></div>
-                                    </div>
-
-                                    <div class="home-part-2">
-                                        <div>
-                                            <h2> Who Needs Labour Law Consultant Services?</h2>
-                                        </div>
-                                        <div class="part-2-top">
-                                            <h3>1. Employers and Businesses:</h3>
-                                            <div>
-                                                <p>
-                                                    – Employers looking to comply with local labor laws and avoid
-                                                    penalties
-                                                    or lawsuits benefit from consulting with a labor law expert.
-                                                    Businesses
-                                                    can ensure their HR policies and practices align with current laws,
-                                                    reducing legal risks and improving workforce management.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>2. Employees:</h3>
-                                            <div>
-                                                <p>
-                                                    – Employees may seek advice on their rights, such as discrimination,
-                                                    wrongful termination, wage disputes, or concerns about workplace
-                                                    safety.
-                                                    Labour law consultants help employees understand their rights and
-                                                    navigate the legal process if they need to take action.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>3. Startups and Small Businesses:</h3>
-                                            <div>
-                                                <p>
-                                                    – New businesses or startups often need assistance in setting up
-                                                    compliant employment structures, contracts, and policies, ensuring
-                                                    they
-                                                    do not violate labor laws from the outset.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="part-2-top">
-                                            <h3>4. Human Resources Departments:</h3>
-                                            <div>
-                                                <p>
-                                                    – HR departments rely on labor law consultants for expert advice on
-                                                    labor relations, creating fair policies, and handling
-                                                    employee-related
-                                                    issues.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line"></div>
-                                    </div>
-
-                                    <div class="home-part-2">
-                                        <div>
-                                            <h2>Benefits of Hiring a Labour Law Consultant:</h2>
-                                        </div>
-                                        <div>
-                                            <p> <b>1. Expert Guidance: </b>
-                                                Labour law consultants bring specialized knowledge and experience in
-                                                labor
-                                                law and regulations, ensuring that businesses are aware of their rights
-                                                and
-                                                responsibilities.
-                                            </p>
-                                        </div>
-
-                                        <div>
-                                            <p> <b>2. Risk Reduction: </b>
-                                                By ensuring compliance with labor laws, businesses reduce the risk of
-                                                costly
-                                                litigation, penalties, or damage to reputation from non-compliance.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p> <b>3. Conflict Resolution: </b>
-                                                Consultants can help prevent or resolve disputes in a timely manner,
-                                                reducing
-                                                workplace tensions and promoting harmonious labor relations.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p> <b>4. Efficiency and Focus:</b>
-                                                Businesses can focus on their core activities while a consultant takes
-                                                care
-                                                of
-                                                complex
-                                                labor law issues, improving overall productivity.
-                                            </p>
-                                        </div>
-
-                                        <div>
-                                            <p> <b>5. Cost Savings:</b>
-                                                Avoiding legal issues, fines, and lawsuits can save businesses money in
-                                                the
-                                                long
-                                                run.
-                                                Consultants can help employers manage costs related to employment
-                                                disputes
-                                                or
-                                                employee
-                                                benefits.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line"></div>
-                                    </div>
-
-                                    <div class="home-part-2">
-                                        <div>
-                                            <h2>Types of Labour Law Consultants:</h2>
-                                        </div>
-                                        <div>
-                                            <p> <b>Independent Freelancers:</b>
-                                                These are individual consultants who work on a contract basis, providing
-                                                labor law advice to businesses or employees.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p> <b>Consulting Firms:</b>
-                                                Larger consulting companies that have teams of experts specializing in
-                                                different aspects of labor law, offering services to a wide range of
-                                                clients
-                                                across industries.
-                                            </p>
-                                        </div>
-
-                                        <div>
-                                            <p> <b>Legal Firms:</b>
-                                                Some law firms specialize in labor law and offer consultancy services
-                                                along
-                                                with legal representation in case of disputes.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="hr-div">
-                                        <div class="hr-line"></div>
-                                    </div>
-
-                                    <div>
-                                        <div>
-                                            <h3>Conclusion:</h3>
-                                        </div>
-
-                                        <div class="home-part-2">
-                                            <p>
-                                                <b>A Labour Law Consultant Service </b> is invaluable for businesses,
-                                                helping ensure
-                                                compliance with labor laws, minimizing legal risks, and fostering a fair
-                                                and
-                                                safe working environment. Whether you are an employer looking to manage
-                                                labor relations or an employee seeking advice on your rights, labor law
-                                                consultants provide the expertise and support needed to navigate complex
-                                                labor laws effectively.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button id="show-more-right-btn" class="btn btn-link p-0"
-                                    style="font-size: 15px; color: #F19E39; font-weight: 600; letter-spacing: 0.5px; transition: background 0.3s, color 0.3s; border-radius: 5px; padding: 4px 14px; display: flex; align-self: center; justify-self: center; text-decoration: none; box-shadow: 0 2px 8px rgba(241,158,57,0.08);"><i
-                                        class="fa fa-chevron-down" style="margin-right: 6px;"></i>More...</button>
                             </div>
                         </div>
                     </div>
@@ -719,105 +442,257 @@
             <div class="hr-line"></div>
         </div>
 
-        <footer id="foot991">
-            <div id="center2">
-                <div class="center-content2">
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
 
-                    <div class="right-center-footer2">
-                        <div class="h4-footer2">
-                            <h4>Company</h4>
+            .footer {
+                background-color: #fbb040;
+                padding: 0;
+                /* border-top-left-radius: 20px;
+                border-top-right-radius: 20px; */
+            }
+
+            /* 
+            .footer-outer{
+                position: relative;
+                padding: 80px 0px 0px 0px;
+            } */
+
+            .footer-inner {
+                /* position: absolute; */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 30px 40px;
+                background: #fff;
+                /* border-top-left-radius: 25px;
+                border-top-right-radius: 25px; */
+            }
+
+            .footer-col {
+                flex: 1 1 220px;
+                margin: 10px;
+            }
+
+            .footer-col h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #0b0024;
+                padding: 5px;
+            }
+
+            .footer-col ul {
+                list-style: none;
+                padding: 0;
+                margin-top: 40px;
+            }
+
+            .footer-col ul li {
+                font-size: 18px;
+                margin-top: 15px;
+                font-weight: 600;
+                color: #0b0024;
+                margin-bottom: 12px;
+            }
+
+            .footer-col ul li.red {
+                color: red;
+            }
+
+            .footer-contact-div {
+                margin-top: 40px;
+            }
+
+            .contact p {
+                font-size: 16px;
+                font-weight: 600;
+                color: #0b0024;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+
+            .contact i {
+                color: #fbb040;
+                margin-right: 10px;
+                font-size: 20px;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 12px;
+                margin-top: 15px;
+            }
+
+            .social-icons i {
+                font-size: 30px;
+                color: white;
+                border-radius: 5px;
+                padding: 10px;
+            }
+
+            .fa-linkedin-in {
+                background-color: #0a66c2;
+            }
+
+            .fa-facebook-f {
+                background-color: #1877f2;
+            }
+
+            .fa-x-twitter {
+                background-color: black;
+            }
+
+            .map-icon {
+                font-size: 100px;
+                margin-top: 15px;
+                color: #f44336;
+            }
+
+            .map-icon span {
+                color: #2196f3;
+            }
+
+
+
+            @media (max-width: 768px) {
+                .footer-inner {
+                    flex-direction: column;
+                    padding: 30px 20px;
+                }
+
+                .footer-col {
+                    margin: 20px 0;
+                }
+
+                .social-icons {
+                    justify-content: center;
+                }
+            }
+        </style>
+
+        <footer class="footer">
+            <div class="footer-outer">
+                <div class="footer-inner">
+                    <div class="footer-col">
+                        <div class="h3-footer">
+                            <h3>Company</h3>
                         </div>
-                        <div class="list-pages2">
-                            <div><a href="" class="hrhover">Home</a></div>
-                            <div><a href="" class="hrhover">Who we are</a></div>
-                            <div><a href="" class="hrhover">LeaderShip Team</a></div>
-                            <div><a href="" class="hrhover">Clientel</a></div>
-                            <div><a href="" class="hrhover">Request A Quote</a></div>
-                            <div><a href="" class="hrhover">Our Alliances</a></div>
-                            <div><a href="" class="hrhover">Downloads</a></div>
-                            <div><a href="" class="hrhover">Contact Us</a></div>
-                            <div><a href="" class="hrhover">Blog</a></div>
-                        </div>
+                        <ul>
+
+                            <li>
+                                <div><a href="" class="hrhover">Home</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">About</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Team</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Career</a></div>
+                            </li>
+                            <li class="red">
+                                <div class="">
+                                    <h6 class="Brochure-footer"><a href="contact.html"
+                                            style="color: red; text-decoration: none; list-style-type: none; font-weight: 600;"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red"
+                                                class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5.523 12.424q.21-.124.459-.238a8 8 0 0 1-.45.606c-.28.337-.498.516-.635.572l-.035.012a.3.3 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548m2.455-1.647q-.178.037-.356.078a21 21 0 0 0 .5-1.05 12 12 0 0 0 .51.858q-.326.048-.654.114m2.525.939a4 4 0 0 1-.435-.41q.344.007.612.054c.317.057.466.147.518.209a.1.1 0 0 1 .026.064.44.44 0 0 1-.06.2.3.3 0 0 1-.094.124.1.1 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256M8.278 6.97c-.04.244-.108.524-.2.829a5 5 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.5.5 0 0 1 .145-.04c.013.03.028.092.032.198q.008.183-.038.465z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.7 11.7 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.86.86 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.84.84 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.8 5.8 0 0 0-1.335-.05 11 11 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.24 1.24 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a20 20 0 0 1-1.062 2.227 7.7 7.7 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103" />
+                                            </svg>Download Brochure</a></h6>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="footer-content-end2">
-                        <div class="h4-footer2">
-                            <h4>
-                                What We Do.
-                            </h4>
+                    <div class="footer-col">
+                        <div class="h3-footer">
+                            <h3>What We Do</h3>
                         </div>
-                        <div class="footer-content-end-right2">
-                            <div><a href="" class="hrhover">PF & ESIC Compliance</a></div>
-                            <div><a href="" class="hrhover">Payroll Processing</a></div>
-                            <div><a href="" class="hrhover">Establishment Compliance</a></div>
-                            <div><a href="" class="hrhover">Factory Act Compliances</a></div>
-                            <div><a href="" class="hrhover">BOCW Compliances</a></div>
-                            <div><a href="" class="hrhover">Contract Labour Compliances</a></div>
-                            <div><a href="" class="hrhover">Compliance Audit & Consultation</a></div>
-                            <div><a href="" class="hrhover">Labour Laws Licensing</a></div>
-                        </div>
-                        <div class="cont-btn1">
-                            <h6 class=""><a href="contact.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
-                                        height="25" fill="red" class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.523 12.424q.21-.124.459-.238a8 8 0 0 1-.45.606c-.28.337-.498.516-.635.572l-.035.012a.3.3 0 0 1-.026-.044c-.056-.11-.054-.216.04-.36.106-.165.319-.354.647-.548m2.455-1.647q-.178.037-.356.078a21 21 0 0 0 .5-1.05 12 12 0 0 0 .51.858q-.326.048-.654.114m2.525.939a4 4 0 0 1-.435-.41q.344.007.612.054c.317.057.466.147.518.209a.1.1 0 0 1 .026.064.44.44 0 0 1-.06.2.3.3 0 0 1-.094.124.1.1 0 0 1-.069.015c-.09-.003-.258-.066-.498-.256M8.278 6.97c-.04.244-.108.524-.2.829a5 5 0 0 1-.089-.346c-.076-.353-.087-.63-.046-.822.038-.177.11-.248.196-.283a.5.5 0 0 1 .145-.04c.013.03.028.092.032.198q.008.183-.038.465z" />
-                                        <path fill-rule="evenodd"
-                                            d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2zM4.165 13.668c.09.18.23.343.438.419.207.075.412.04.58-.03.318-.13.635-.436.926-.786.333-.401.683-.927 1.021-1.51a11.7 11.7 0 0 1 1.997-.406c.3.383.61.713.91.95.28.22.603.403.934.417a.86.86 0 0 0 .51-.138c.155-.101.27-.247.354-.416.09-.181.145-.37.138-.563a.84.84 0 0 0-.2-.518c-.226-.27-.596-.4-.96-.465a5.8 5.8 0 0 0-1.335-.05 11 11 0 0 1-.98-1.686c.25-.66.437-1.284.52-1.794.036-.218.055-.426.048-.614a1.24 1.24 0 0 0-.127-.538.7.7 0 0 0-.477-.365c-.202-.043-.41 0-.601.077-.377.15-.576.47-.651.823-.073.34-.04.736.046 1.136.088.406.238.848.43 1.295a20 20 0 0 1-1.062 2.227 7.7 7.7 0 0 0-1.482.645c-.37.22-.699.48-.897.787-.21.326-.275.714-.08 1.103" />
-                                    </svg>Download Brochure</a></h6>
-                        </div>
+                        <ul>
+                            <li>
+                                <div><a href="" class="hrhover">PF & ESIC Compliance</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Payroll Processing</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Compliance Processs</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Audit & Advisory</a></div>
+                            </li>
+                            <li>
+                                <div><a href="" class="hrhover">Labour Laws Licensing</a></div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="center-footer-content2">
-                        <div class="center-footer-content-left2">
-                            <div class="h4-footer2">
-                                <h4>Contact us</h4>
+                    <div class="footer-col contact">
+                        <div class="h3-footer">
+                            <h3>Contact us</h3>
+                        </div>
+
+                        <div class="footer-contact-div">
+                            <div style="display: flex;">
+                                <i class="fas fa-map-marker-alt" style="font-size: 50px;"></i>
+                                <p>Kh 88, Pn 4, 20 - Point Colony<br>Ashram Road
+                                    Village
+                                    Budhpur New Delhi-110036</p>
                             </div>
-                            <div class="contact-detail2">
-                                <div>
-                                    <h5>HEAD OFFICE</h5>
-                                    <h6>KH 88, PN 4, 20 -Point Colony Ashram Road Village Budhpur New Delhi-110036
-                                    </h6>
-                                </div>
-                                <div>
-                                    <p><b>PHONE: </b><span>+91 7701901010</span></p>
-                                </div>
-                                <div>
-                                    <p><b>EMAIL: </b><span>Pankaj.k@conformityalliance.in </span></p>
-                                    <p><b>INFO</b>: info@conformityalliance.com</p>
-                                </div>
-                                <div class="nav-right-icons ">
-                                    <a href="">
-                                        <i class="fa-brands fa-instagram fa-2x" style="color: #ffffff;"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="fa-brands fa-facebook-f fa-2x" style="color: #ffffff;"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/company/conformity-alliance/">
-                                        <i class="fa-brands fa-linkedin-in fa-2x" style="color: #ffffff;"></i>
-                                    </a>
-                                </div>
+                            <div style="display: flex; gap: .5rem;">
+                                <i class="fas fa-phone" style="margin-left: 10px;"></i>
+                                <p>91 7701901010</p>
+
+                            </div>
+                            <div style="display: flex; gap: .5rem;">
+                                <i class="fas fa-envelope" style="margin-left: 10px;"></i>
+                                <p>info@conformityalliance.com</p>
+
+                            </div>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/people/Conformity-Alliance/61574098757164/?sk=about">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <i class="fab fa-x-twitter"></i>
+                                <a href="https://www.linkedin.com/company/conformity-alliance/">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="address-map2">
-                        <div class="h4-footer2">
-                            <h4>Address Map</h4>
+                    <div class="footer-col">
+                        <div class="h3-footer">
+                            <h3>Quick Links</h3>
                         </div>
-                        <div style="position: relative;">
-                            <a href="https://maps.app.goo.gl/kbDW3K1uKPfJcyNK6" target="_blank"
-                                style="position: absolute; width: 100%; height: 100%; z-index: 10;">
-                            </a>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.7694643184755!2d77.13539999999999!3d28.7843723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d011ceba9032f%3A0xad18d9b6c4ed88b4!2sConformity%20Alliance!5e1!3m2!1sen!2sin!4v1746280131269!5m2!1sen!2sin"
-                                width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <ul>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                        </ul> -->
+                        <div class="address-map2">
+                            <div style="position: relative; margin-top: 40px;">
+                                <a href="https://maps.app.goo.gl/kbDW3K1uKPfJcyNK6" target="_blank"
+                                    style="position: absolute; width: 100%; height: 100%; z-index: 10;">
+                                </a>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2763.7694643184755!2d77.13539999999999!3d28.7843723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d011ceba9032f%3A0xad18d9b6c4ed88b4!2sConformity%20Alliance!5e1!3m2!1sen!2sin!4v1746280131269!5m2!1sen!2sin"
+                                    width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
 

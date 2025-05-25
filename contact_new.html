@@ -3,351 +3,322 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us</title>
+  <title>Home Body Section</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+    }
+
+    .main-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      background: linear-gradient(to right, #f37021, #242c47);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .left-menu {
+      flex: 1;
+      max-width: 400px;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      color: #f37021;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-item:hover {
+      background-color: #f37021;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .menu-item.active {
+      background-color: #f37021;
+      color: white;
+    }
+
+    .right-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .circle-img {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      .main-body {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left-menu,
+      .right-image {
+        max-width: 100%;
+      }
+
+      .circle-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  </style>-->
+</head>
+
+<body>
+
+<!--  
+  <div class="main-body">
+    <div class="left-menu">
+      <div class="menu-item active">✔ Registration/Licences</div>
+      <div class="menu-item">✔ Compliance Process Outsourcing</div>
+      <div class="menu-item">✔ Audit & Advisory</div>
+      <div class="menu-item">✔ Compliance Calendar</div>
+    </div>
+
+    <div class="right-image">
+      <div class="circle-img">
+        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603" alt="Team Working" />
+      </div>
+    </div>
+  </div> -->
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer {
+      background-color: #fbb040;
       padding: 0;
-      background: #f7f7f7;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      width: 100%;
+      position: relative;
     }
 
-    .container {
+    .footer-absolute {
       display: flex;
-      max-width: 1000px;
-      margin: 40px auto;
+      padding: 20px 40px;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+    }
+
+    .footer-absolute h3 {
+      font-weight: 600;
+      font-size: 23px;
+    }
+
+    .footer-outer {
+      position: relative;
+      padding: 80px 0px 0px 0px;
+
+    }
+
+    .footer-inner {
+      /* position: absolute; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 30px 40px;
       background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
     }
 
-    .left-panel,
-    .right-panel {
-      padding: 30px;
-      flex: 1;
+    .footer-col {
+      flex: 1 1 220px;
+      margin: 10px;
     }
 
-    .left-panel {
-      background: #f2f2f2;
+    .footer-col h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0b0024;
+      margin-bottom: 30px;
     }
 
-    .left-panel h3 {
-      margin-bottom: 10px;
+    .absolute-footer-h3-div {
+      flex: 1 1 220px;
+      margin: 10px;
     }
 
-    .social-icons a {
-      display: inline-block;
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0b0024;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul li.red {
+      color: red;
+    }
+
+    .contact p {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0b0024;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .contact i {
+      color: #fbb040;
       margin-right: 10px;
       font-size: 20px;
     }
 
-    .contact-info {
-      margin-top: 20px;
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
     }
 
-    .contact-info p {
-      margin: 10px 0;
-    }
-
-    .right-panel h2 {
-      margin-bottom: 20px;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      padding: 10px 20px;
-      background: #ff6a00;
+    .social-icons i {
+      font-size: 30px;
       color: white;
-      border: none;
       border-radius: 5px;
-      cursor: pointer;
+      padding: 10px;
     }
 
-    .success-message {
-      color: green;
-      margin-top: 10px;
+    .fa-linkedin-in {
+      background-color: #0a66c2;
+    }
+
+    .fa-facebook-f {
+      background-color: #1877f2;
+    }
+
+    .fa-x-twitter {
+      background-color: black;
+    }
+
+    .map-icon {
+      font-size: 100px;
+      margin-top: 15px;
+      color: #f44336;
+    }
+
+    .map-icon span {
+      color: #2196f3;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .footer-inner {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .footer-col {
+        margin: 20px 0;
+      }
+
+      .social-icons {
+        justify-content: center;
+      }
     }
   </style>
-</head>
 
-<body>
-  <div class="container">
-    <div class="left-panel">
-      <h3>Contact Details</h3>
-      <p>We move fast. Send us your email, we’ll make sure you never miss a thing.</p>
-      <h4>Follow us on:</h4>
-      <div class="social-icons">
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">YouTube</a>
+  <footer class="footer">
+    <div class="footer-absolute">
+      <div class="absolute-footer-h3-div">
+        <h3>Company</h3>
       </div>
-      <div class="contact-info">
-        <p><strong>Contact No.:</strong> +91-9050576838</p>
-        <p><strong>Email Us:</strong> info@praansconsultech.com</p>
+      <div class="absolute-footer-h3-div">
+        <h3>What We Do </h3>
+      </div>
+      <div class="absolute-footer-h3-div">
+        <h3>Contact Us</h3>
+      </div>
+      <div class="absolute-footer-h3-div">
+        <h3>Quick Links</h3>
       </div>
     </div>
+    <div class="footer-outer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <!-- <h3>Company</h3> -->
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Team</li>
+            <li>Career</li>
+            <li class="red">Download Brochure</li>
+          </ul>
+        </div>
 
-    <div class="right-panel">
-      <h2>Get In Touch</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Enter Email" required />
-        <input type="text" placeholder="Contact No." required />
-        <textarea placeholder="Enter Message" rows="5" required></textarea>
-        <button type="submit">SUBMIT REQUEST</button>
-        <p class="success-message" style="display:none;">Success!</p>
-      </form>
-    </div>
-  </div>
-</body>
+        <div class="footer-col">
+          <!-- <h3>What We Do</h3> -->
+          <ul>
+            <li>PF & ESIC Compliance</li>
+            <li>Payroll Processing</li>
+            <li>Compliance Processs</li>
+            <li>Audit & Advisory</li>
+            <li>Labour Laws Licensing</li>
+          </ul>
+        </div>
 
-</html>
-
-
-
-
-
-
-<div class="section-1-left">
-  <div class="sidebar">
-    <form class="d-flex form-sidebar" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search Services..." id="searchBar"
-        onkeyup="filterServices()" />
-      <button type="button" class="btn btn-outline-warning">
-        search
-      </button>
-    </form>
-
-    <h2>Our Services</h2>
-
-    <div class="hr-div">
-      <div class="hr-line1"></div>
-    </div>
-
-    <!-- Registration & License -->
-    <div class="sidebar-first" data-category="Registration & License">
-      <h4>Registration & License</h4>
-      <ul id="service-list">
-        <li>
-          <a href="interStateMigration.html">Inter-state Migrant Registration</a>
-        </li>
-        <li>
-          <a href="ShopandEstablishmentLicense.html">Shop and Establishment
-            License</a>
-        </li>
-        <li><a href="factoryAct.html">Factory Act License</a></li>
-        <li><a href="BOWCE-licence.html">BOCW License</a></li>
-        <li>
-          <a href="ContactLabourLicence.html">Contract Labor License</a>
-        </li>
-        <li class="more-service d-none">
-          <a href="ElectricalLicence.html">Electrical License</a>
-        </li>
-        <li class="more-service d-none"><a href="tradeLicence.html">Trade License</a></li>
-        <li class="more-service d-none">
-          <a href="PollutionCertification.html">Pollution Certification</a>
-        </li>
-        <li class="more-service d-none">
-          <a href="Fire&safetyCertification.html">Fire & Safety Certification</a>
-        </li>
-        <li class="more-service d-none">
-          <a href="PASARA.html">Private Security Agency License (PASARA)</a>
-        </li>
-        <li class="more-service d-none">
-          <a href="cateringLicence.html">Catering License</a>
-        </li>
-      </ul>
-      <button id="show-more-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
-    </div>
-
-    <div class="hr-div">
-      <div class="hr-line1"></div>
-    </div>
-
-    <!-- Consultant -->
-    <div class="sidebar-first" data-category="Consultant">
-      <h4>Consultant</h4>
-      <ul id="consultant-list">
-        <li><a href="ESI-Consultant.html">ESI Consultant</a></li>
-        <li><a href="PF-Consultant.html">PF Consultant</a></li>
-        <li>
-          <a href="ProfessionalTaxConsultant.html">Professional Tax Consultant</a>
-        </li>
-        <li>
-          <a href="PayrollProcessing.html">Payroll Processing</a>
-        </li>
-        <li>
-          <a href="satutoryReturn.html">Statutory Returns</a>
-        </li>
-        <li class="more-consultant d-none"><a href="StandingOrder.html">Standing Orders</a></li>
-        <li class="more-consultant d-none"><a href="NightExtension.html">Night Exemption</a></li>
-        <li class="more-consultant d-none">
-          <a href="factoryPlanAprove.html">Factory Plan Approval</a>
-        </li>
-        <li class="more-consultant d-none"><a href="CTEApprove.html">CTE / CTO Approval</a></li>
-        <li class="more-consultant d-none"><a href="">Compensation & Benefit</a></li>
-        <li class="more-consultant d-none">
-          <a href="ComplianceAudit&Consultation.html">Compliance Audit & Consultation</a>
-        </li>
-      </ul>
-      <button id="show-more-consultant-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
-    </div>
-
-    <div class="hr-div">
-      <div class="hr-line1"></div>
-    </div>
-
-    <!-- Labor Compliance Audit -->
-    <div class="sidebar-first" data-category="Labor Compliance Audit">
-      <h4>Labor Compliance Audit</h4>
-      <ul id="audit-list">
-        <li>
-          <a href="factoryAuditConsultant.html">Factory Audits</a>
-        </li>
-        <li>
-          <a href="contractLabourAuditConsultant.html">Contract Labor Audits</a>
-        </li>
-        <li>
-          <a href="establishmentAudit.html">Establishment Audits</a>
-        </li>
-        <li class="more-audit d-none"><a href="EHSAuditConsultant.html">EHS Audits</a></li>
-        <li class="more-audit d-none"><a href="PASARA.html">PASARA Audits</a></li>
-        <li class="more-audit d-none"><a href="">Vendor Compliance Audits</a></li>
-      </ul>
-      <button id="show-more-audit-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
-    </div>
-
-    <div class="hr-div">
-      <div class="hr-line1"></div>
-    </div>
-
-    <!-- Liaison Assistance -->
-    <div class="sidebar-first" data-category="Liaison Assistance">
-      <h4>Liaison Assistance</h4>
-      <ul id="liaison-list">
-        <li><a href="">Client Billing Assistance</a></li>
-        <li><a href="">Liaising with Authorities</a></li>
-        <li><a href="">Handling Labor Departmental Inspections</a></li>
-        <li class="more-liaison d-none"><a href="">Handling Labor Departmental Notices Reply</a></li>
-      </ul>
-      <button id="show-more-liaison-btn" class="btn btn-link p-0" style="font-size: 14px;">More...</button>
-    </div>
-  </div>
-  <script>
-    // Registration & License
-    document.getElementById('show-more-btn').onclick = function () {
-      document.querySelectorAll('.more-service').forEach(e => e.classList.toggle('d-none'));
-      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
-    };
-    // Consultant
-    document.getElementById('show-more-consultant-btn').onclick = function () {
-      document.querySelectorAll('.more-consultant').forEach(e => e.classList.toggle('d-none'));
-      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
-    };
-    // Labor Compliance Audit
-    document.getElementById('show-more-audit-btn').onclick = function () {
-      document.querySelectorAll('.more-audit').forEach(e => e.classList.toggle('d-none'));
-      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
-    };
-    // Liaison Assistance
-    document.getElementById('show-more-liaison-btn').onclick = function () {
-      document.querySelectorAll('.more-liaison').forEach(e => e.classList.toggle('d-none'));
-      this.textContent = this.textContent === 'More...' ? 'Less...' : 'More...';
-    };
-  </script>
-
-  <div class="hr-div">
-    <div class="hr-line1"></div>
-  </div>
-
-  <div class="help-wrapper2">
-    <div class="help2">
-      <div class="help-content">
-        <h4>How can we help you?</h4>
-        <p>
-          Contact us or submit a business enquiry online and find
-          out how less you need to invest to get the best
-        </p>
-
-        <button type="button" class="btn btn-outline-warning">
-          <img src="assets/images/call_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png" alt="" />Contact
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<section>
-  <div class="section-1-wrapper">
-    <div class="section-1-content">
-
-
-      <div class="vr-div hide">
-        <div class="vr-line"></div>
-      </div>
-
-      <div class="section-1-right">
-        <div class="section-1-contant">
-          <div class="section-1-h1">
-            <h2>Request Services</h2>
+        <div class="footer-col contact">
+          <!-- <h3>Contact us</h3> -->
+          <p><i class="fas fa-map-marker-alt"></i>Kh 88, Pn 4, 20 - Point Colony<br>Ashram Road Village
+            Budhpur New Delhi-110036</p>
+          <p><i class="fas fa-phone"></i>91 7701901010</p>
+          <p><i class="fas fa-envelope"></i>info@conformityalliance.com</p>
+          <div class="social-icons">
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-x-twitter"></i>
           </div>
+        </div>
 
-          <div class="section-1-input">
-            <form action="assets/php/send_email.php" method="POST" class="input-list">
-              <div class="L-input">
-                <div class="input-field">
-                  <!-- <label for="">First Name*</label> -->
-                  <input type="text" placeholder="Enter your name*" id="name" name="name" required />
-                </div>
-                <div class="input-field">
-                  <!-- <label for="">Service required*</label> -->
-                  <input type="text" placeholder="Service required*" required name="service" />
-                </div>
-                <div class="input-field">
-                  <!-- <label for="">Company Name</label> -->
-                  <input type="text" placeholder="Company name*" name="company" />
-                </div>
-                <div class="input-field">
-                  <!-- <label for="">Email*</label> -->
-                  <input type="email" placeholder="Enter your email" required name="email" />
-                </div>
-              </div>
-              <div class="R-input">
-                <div class="input-field">
-                  <!-- <label for="">Phone*</label> -->
-                  <input type="tel" placeholder="Enter your phone number*" required name="phone" />
-                </div>
-                <div class="input-field textarea1">
-                  <!-- <label for="">Message*</label> -->
-                  <textarea type="text" placeholder="Enter your message*" required name="message" cols="30"
-                    rows="10"></textarea>
-                  <!-- <input name="" id="" 
-                                                    placeholder="Enter your message*" /> -->
-                  <div>
-                    <button type="submit" class=" contact-btn">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-
-                <!-- <p id="responseMessage"></p> -->
-              </div>
-            </form>
+        <div class="footer-col">
+          <!-- <h3>Quick Links</h3> -->
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+          </ul>
+          <div class="map-icon">
+            <i class="fas fa-map-marker-alt"></i>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
+</body>
+
+</html>

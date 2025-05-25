@@ -312,3 +312,25 @@
     justify-content: center;
   }
 }
+@media (max-width: 400px) {
+  .contact-section {
+    padding: .5rem 0!important;
+  }
+  .contact-left,
+  .contact-right {
+    padding: 7px 2px !important;
+  }
+  .input-field input,
+  .input-field textarea {
+    font-size: 0.93rem !important;
+    padding: 7px 5px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: initial;
+  }
+
+  
+}
