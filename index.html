@@ -156,7 +156,7 @@
                                                 </li>
                                                 <li><a href="CTEApprove.html" class="dropdown-item py-2 text-wrap">CTE /
                                                         CTO Approval</a></li>
-                                                <li><a href="">Compensation & Benefit</a></li>
+                                                <li><a href="" class="dropdown-item py-2 text-wrap">Compensation & Benefit</a></li>
                                                 <li>
                                                     <a href="ComplianceAudit&Consultation.html"
                                                         class="dropdown-item py-2 text-wrap">Compliance Audit &
@@ -515,6 +515,11 @@
                         letter-spacing: 0.01em;
                     }
 
+                    .service-card a{
+                        list-style-type: none;
+                        text-decoration: none;
+                    }
+
                     .service-card .service-icon {
                         font-size: 1.25rem;
                         color: #fff;
@@ -531,10 +536,10 @@
                     }
 
                     .service-card.active,
-                    .service-card:hover {
+                    .service-card:hover, .service-card:hover a {
                         background: linear-gradient(90deg, #5e5e5e 0%, #5c5049 100%);
                         color: #fff;
-                        border-left: 4px solid #d4d4d4;
+                        /* border-left: 1px solid #d4d4d4; */
                         box-shadow: 0 8px 28px rgba(235, 162, 67, 0.18);
                         transform: translateY(-2px) scale(1.035);
                     }
@@ -618,19 +623,20 @@
                         <div class="home-services-menu">
                             <div class="service-card">
                                 <span class="service-icon"><i class="fa-solid fa-id-card"></i></span>
-                                Registration / Licences
+                                <a href="registration.html">Registration / Licences</a>
                             </div>
                             <div class="service-card">
                                 <span class="service-icon"><i class="fa-solid fa-briefcase"></i></span>
-                                Compliance Process Outsourcing
+                                
+                                <a href="complainProcessOutsource.html">Compliance Process Outsourcing</a>
                             </div>
                             <div class="service-card">
                                 <span class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
-                                Audit & Advisory
+                                <a href="audit&advisory.html">Audit & Advisory</a>
                             </div>
                             <div class="service-card">
                                 <span class="service-icon"><i class="fa-solid fa-calendar-check"></i></span>
-                                Compliance Calendar
+                                <a href="complianceCalender.html">Compliance Calendar</a>
                             </div>
                         </div>
                     </div>
