@@ -1,113 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
+  
+  <head>
+    <meta charset="UTF-8">
   <title>Home Body Section</title>
-
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- <style>
+</head>
+
+<body>
+  <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
+      font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+      background: #f6f7fb;
     }
 
     .main-body {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 50px;
-      background: linear-gradient(to right, #f37021, #242c47);
-      color: #fff;
-      overflow: hidden;
+      align-items: stretch;
+      justify-content: center;
+      padding: 60px 30px 40px 30px;
+      background: linear-gradient(120deg, #23243a 0%, #fbb040 100%);
+      min-height: 500px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 8px 32px rgba(44, 44, 84, 0.18);
+      position: relative;
+      z-index: 1;
     }
 
     .left-menu {
       flex: 1;
-      max-width: 400px;
+      max-width: 420px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(44,44,84,0.08);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 40px;
+      min-width: 320px;
+      transition: box-shadow 0.3s;
+    }
+
+    .left-menu:hover {
+      box-shadow: 0 8px 32px rgba(44,44,84,0.16);
+    }
+
+    .menu-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #23243a;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+      text-align: left;
     }
 
     .menu-item {
-      background-color: #fff;
-      color: #f37021;
-      padding: 15px 20px;
-      margin-bottom: 10px;
-      font-size: 18px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .menu-item:hover {
-      background-color: #f37021;
-      color: #fff;
+      background: linear-gradient(90deg, #fbb040 0%, #fff 100%);
+      color: #23243a;
+      padding: 18px 22px;
+      margin-bottom: 18px;
+      font-size: 19px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(251,176,64,0.08);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
       cursor: pointer;
+      position: relative;
     }
 
-    .menu-item.active {
-      background-color: #f37021;
-      color: white;
+    .menu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .menu-item.active, .menu-item:hover {
+      background: linear-gradient(90deg, #23243a 0%, #fbb040 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(35,36,58,0.10);
+    }
+
+    .menu-item .icon {
+      font-size: 20px;
+      color: #fbb040;
+      background: #23243a12;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.3s, background 0.3s;
+    }
+
+    .menu-item.active .icon, .menu-item:hover .icon {
+      color: #23243a;
+      background: #fbb040;
     }
 
     .right-image {
       flex: 1;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      min-width: 320px;
       position: relative;
     }
 
     .circle-img {
-      width: 450px;
-      height: 450px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 32px rgba(44,44,84,0.18);
+      position: relative;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .circle-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: grayscale(10%) contrast(1.08) brightness(1.05);
+      transition: filter 0.3s;
     }
 
-    @media (max-width: 900px) {
+    .circle-img::after {
+      content: '';
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      border-radius: 50%;
+      border: 4px solid #fbb040;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 1100px) {
       .main-body {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        padding: 40px 10px 30px 10px;
       }
-
-      .left-menu,
+      .left-menu {
+        margin-right: 0;
+        margin-bottom: 32px;
+        width: 100%;
+        max-width: 600px;
+      }
       .right-image {
-        max-width: 100%;
+        width: 100%;
+        justify-content: center;
       }
-
       .circle-img {
-        width: 300px;
-        height: 300px;
+        width: 320px;
+        height: 320px;
       }
     }
-  </style>-->
-</head>
 
-<body>
+    @media (max-width: 600px) {
+      .main-body {
+        padding: 18px 0 10px 0;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+      }
+      .left-menu {
+        padding: 24px 10px;
+        min-width: unset;
+        max-width: 100%;
+      }
+      .menu-title {
+        font-size: 22px;
+        margin-bottom: 18px;
+      }
+      .circle-img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
 
-<!--  
   <div class="main-body">
     <div class="left-menu">
-      <div class="menu-item active">✔ Registration/Licences</div>
-      <div class="menu-item">✔ Compliance Process Outsourcing</div>
-      <div class="menu-item">✔ Audit & Advisory</div>
-      <div class="menu-item">✔ Compliance Calendar</div>
-    </div>
-
-    <div class="right-image">
-      <div class="circle-img">
-        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603" alt="Team Working" />
+      <div class="menu-title">Our Services</div>
+      <div class="menu-item active">
+        <span class="icon"><i class="fas fa-id-card-alt"></i></span>
+        Registration/Licences
+      </div>
+      <div class="menu-item">
+        <span class="icon"><i class="fas fa-tasks"></i></span>
+        Compliance Process Outsourcing
+      </div>
+      <div class="menu-item">
+        <span class="icon"><i class="fas fa-search-dollar"></i></span>
+        Audit & Advisory
+      </div>
+      <div class="menu-item">
+        <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+        Compliance Calendar
       </div>
     </div>
-  </div> -->
+    <div class="right-image">
+      <div class="circle-img">
+        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=800&q=80" alt="Team Working" />
+      </div>
+    </div>
+  </div>
 
   <style>
     body {
@@ -235,8 +345,6 @@
     .map-icon span {
       color: #2196f3;
     }
-
-
 
     @media (max-width: 768px) {
       .footer-inner {
