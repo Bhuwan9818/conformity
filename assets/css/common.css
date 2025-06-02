@@ -159,6 +159,19 @@
     transition: width 0.4s ease-in-out;
   }
 
+  footer .hrhover::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:#ff9800;
+    color: #ff9800;
+    transition: width 0.4s ease-in-out;
+  }
+
 html{
     scroll-behavior: smooth;
 }
