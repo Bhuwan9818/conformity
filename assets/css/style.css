@@ -1,6 +1,6 @@
-html,body{
+/* html,body{
     padding: .5rem;
-}
+} */
 
 body{
     font-family: 'Syne', sans-serif;
@@ -82,9 +82,9 @@ body{
 }
 
 #main{
-    border: 1px solid hsl(0, 0%, 0%); 
-    border-radius: 5px;
-    padding: 1rem 2.5rem;
+    /* border: 1px solid hsl(0, 0%, 0%);  */
+    /* border-radius: 5px; */
+    /* padding: .5rem 1.5rem; */
     /* margin: 10px; */
 }
 
