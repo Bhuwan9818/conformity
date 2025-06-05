@@ -6,13 +6,13 @@ body{
     font-family: 'Syne', sans-serif;
 }
 
-.whatsapp_img{
+/* .whatsapp_img{
     position: fixed;
     bottom: 30px;
     z-index: 100;
     right: 30px;
     width: 60px;
-}
+} */
 
 .nav-link{
     font-size: 1.3rem !important;
@@ -23,10 +23,10 @@ body{
     color: hsl(0, 0%, 0%);
 }
 
-.img-whsapp{
+/* .img-whsapp{
     width: 100%;
     height: 100%;
-}
+} */
 
 .nav-but{
     padding: 10px 20px !important;
