@@ -30,130 +30,7 @@
 <body>
     <div id="main">
 
-        <style>
-            .whatsapp_img {
-                position: fixed;
-                bottom: 32px;
-                right: 32px;
-                z-index: 9999;
-                transition: transform 0.2s;
-            }
-            .whatsapp-fab {
-                display: flex;
-                align-items: center;
-                gap: 0.7rem;
-                background: linear-gradient(135deg, #ff9800 0%, #f37021 100%);
-                color: #fff;
-                border-radius: 50px;
-                box-shadow: 0 4px 24px rgba(241, 158, 57, 0.18), 0 0 0 0 #ff9800;
-                padding: 13px 28px 13px 16px;
-                font-weight: 700;
-                font-size: 1.13rem;
-                text-decoration: none;
-                position: relative;
-                overflow: visible;
-                border: 2.5px solid #fff;
-                transition: 
-                    background 0.22s, 
-                    box-shadow 0.22s, 
-                    transform 0.18s,
-                    border-color 0.22s;
-                letter-spacing: 0.03em;
-                animation: whatsappPulse 2.2s infinite;
-            }
-            @keyframes whatsappPulse {
-                0% { box-shadow: 0 4px 24px rgba(241, 158, 57, 0.18), 0 0 0 0 #ff980055; }
-                70% { box-shadow: 0 4px 24px rgba(241, 158, 57, 0.18), 0 0 0 16px #ff980000; }
-                100% { box-shadow: 0 4px 24px rgba(241, 158, 57, 0.18), 0 0 0 0 #ff980055; }
-            }
-            .whatsapp-fab:hover,
-            .whatsapp-fab:focus {
-                background: linear-gradient(135deg, #232526 0%, #5c5049 100%);
-                color: #fff;
-                border-color: #ff9800;
-                box-shadow: 0 8px 32px rgba(241, 158, 57, 0.28), 0 0 0 8px #ff980044;
-                transform: translateY(-3px) scale(1.07) rotate(-2deg);
-                text-decoration: none;
-                animation: none;
-            }
-            .img-whsapp {
-                width: 36px;
-                height: 36px;
-                margin-right: 8px;
-                filter: drop-shadow(0 2px 8px #ff980055);
-                background: #fff;
-                border-radius: 8px;
-                padding: 4px;
-                transition: filter 0.2s, background 0.22s;
-                border: 1.5px solid #ff9800;
-            }
-            .whatsapp-fab:hover .img-whsapp {
-                filter: drop-shadow(0 4px 16px #23252688);
-                background: #ff9800;
-                border-color: #fff;
-            }
-            .whatsapp-tooltip {
-                visibility: hidden;
-                opacity: 0;
-                background: #232526;
-                color: #fff;
-                text-align: center;
-                border-radius: 8px;
-                padding: 10px 22px;
-                position: absolute;
-                right: 110%;
-                top: 50%;
-                transform: translateY(-50%) scale(0.98);
-                white-space: nowrap;
-                font-size: 1.05rem;
-                font-weight: 500;
-                box-shadow: 0 2px 12px rgba(36,44,71,0.12);
-                transition: opacity 0.18s, visibility 0.18s, transform 0.18s;
-                pointer-events: none;
-                border: 2px solid #ff9800;
-                letter-spacing: 0.02em;
-            }
-            .whatsapp-fab:hover .whatsapp-tooltip,
-            .whatsapp-fab:focus .whatsapp-tooltip {
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(-50%) scale(1.07);
-            }
-            .whatsapp-fab .whatsapp-emoji {
-                font-size: 1.35em;
-                margin-left: 2px;
-                filter: drop-shadow(0 1px 2px #fff3e0);
-                animation: emojiWave 1.2s infinite alternate;
-                transition: filter 0.2s;
-            }
-            @keyframes emojiWave {
-                0% { transform: rotate(-10deg);}
-                100% { transform: rotate(18deg);}
-            }
-            .whatsapp-fab:hover .whatsapp-emoji {
-                filter: drop-shadow(0 2px 8px #ff9800aa);
-            }
-            @media (max-width: 600px) {
-                .whatsapp_img {
-                    bottom: 18px;
-                    right: 12px;
-                }
-                .whatsapp-fab {
-                    padding: 10px 14px 10px 10px;
-                    font-size: 1rem;
-                }
-                .img-whsapp {
-                    width: 28px;
-                    height: 28px;
-                    margin-right: 6px;
-                    padding: 2px;
-                }
-                .whatsapp-tooltip {
-                    font-size: 0.92rem;
-                    padding: 7px 12px;
-                }
-            }
-        </style>
+        
         <div class="whatsapp_img">
             <a href="https://wa.me/7701901010" target="_blank" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
                 <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="img-whsapp" />
@@ -506,7 +383,8 @@
                         </ul>
                     </ul>
 
-                    <button class="nav-but"><a href="contact.html">Get Quote</a> </button>
+                    
+                    <button class="nav-but"><a href="contact.html">Get Quote</a></button>
 
                     <div class="nav-right-icons ">
                         <a href="">
@@ -1347,7 +1225,7 @@
                                 <div><a href="" class="hrhover a-b">Career</a></div>
                             </li>
                             <li class="red">
-                                <span style="display: inline-flex; align-items: center; background: #ff9800; border-radius: 8px; padding: 8px 14px; box-shadow: 0 2px 8px #ff980033; margin-top: 8px;">
+                                <span style="display: inline-flex; align-items: center; background: #e9ca9b; border-radius: 8px; padding: 8px 14px; box-shadow: 0 2px 8px #ff980033; margin-top: 8px;">
                                     <a href="contact.html" style="color: red; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 7px;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red"
                                             class="bi bi-file-earmark-pdf-fill" viewBox="0 0 16 16">
