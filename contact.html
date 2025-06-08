@@ -95,19 +95,53 @@
 
                     <button class="nav-but"><a href="contact.html">Get Quote</a> </button>
 
-                    <div class="nav-right-icons">
-                        <a href="">
+                    <div class="nav-right-icons enhanced-icons">
+                        <a href="" class="icon-btn" aria-label="Twitter">
                             <i class="fa-brands fa-twitter fa-2x icons-2"></i>
                         </a>
-
-                        <a href="https://www.facebook.com/people/Conformity-Alliance/61574098757164/?sk=about">
+                        <a href="https://www.facebook.com/people/Conformity-Alliance/61574098757164/?sk=about" class="icon-btn" aria-label="Facebook">
                             <i class="fa-brands fa-facebook fa-2x icons-2"></i>
                         </a>
-
-                        <a href="https://www.linkedin.com/company/conformity-alliance/">
+                        <a href="https://www.linkedin.com/company/conformity-alliance/" class="icon-btn" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin fa-2x icons-2"></i>
                         </a>
                     </div>
+                    <style>
+                        .enhanced-icons {
+                            display: flex;
+                            gap: 18px;
+                            align-items: center;
+                        }
+                        .icon-btn {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: #fff;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 8px rgba(241, 158, 57, 0.18), 0 1.5px 6px rgba(241, 158, 57, 0.18);
+                            transition: transform 0.2s, box-shadow 0.2s;
+                            width: 48px;
+                            height: 48px;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .icon-btn:hover, .icon-btn:focus {
+                            transform: translateY(-4px) scale(1.08);
+                            box-shadow: 0 6px 18px rgba(241, 158, 57, 0.795), 0 2px 8px rgba(241, 158, 57, 0.555);
+                            background: rgba(241, 158, 57, 0.18);
+                            outline: none;
+                        }
+                        .icon-btn i {
+                            color: #000 !important;
+                            transition: color 0.2s, transform 0.2s;
+                            font-size: 1.6em;
+                        }
+                        .icon-btn:hover i, .icon-btn:focus i {
+                            color: #000;
+                            transform: scale(1.12);
+                            filter: drop-shadow(0 2px 4px rgba(241, 158, 57, 0.18));
+                        }
+                    </style>
                 </div>
             </div>
         </nav>
