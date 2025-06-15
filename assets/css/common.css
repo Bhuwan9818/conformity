@@ -27,6 +27,35 @@
   gap: 0.7rem;
   margin-right: 20px;
 }
+
+.mrg {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .footer-col {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    display: contents;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
 .nav-but a {
   color: #fff;
   text-decoration: none;
