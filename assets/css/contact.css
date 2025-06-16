@@ -109,6 +109,8 @@
 .contact-info i {
   color: #ff9800;
   font-size: 19px;
+  display: flex;
+  justify-content: center;
   min-width: 26px;
   background: #fff8f1;
   border-radius: 50%;
